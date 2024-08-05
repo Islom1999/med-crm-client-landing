@@ -41,11 +41,12 @@
 		font-weight: 600;
 		position: relative;
 		display: inline-block;
+		margin-bottom: 10px;
 
 		&::before {
 			content: ' ';
 			position: absolute;
-			bottom: -1px;
+			bottom: -2px;
 			width: 100%;
 			height: 5px;
 			border-radius: 28px;
