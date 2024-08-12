@@ -129,3 +129,35 @@ nav {
 	justify-content: flex-end;
 	column-gap: 25px;
 }
+
+.service-orders {
+	margin-top: 60px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	column-gap: 100px;
+
+	.order-item {
+		border: 1px solid var(--mc-D6EBFE);
+		display: flex;
+
+		.order-item__icon {
+			width: 109px;
+			height: 107px;
+			flex-shrink: 0;
+			padding: 20px;
+		}
+
+		.order-item__txt {
+			width: 338px;
+			padding: 20px;
+			background-color: var(--mc-D6EBFE);
+
+			h3 {
+				color: var(--mc-0082FB);
+				font-size: 22px;
+				font-weight: 500;
+			}
+		}
+	}
+}
