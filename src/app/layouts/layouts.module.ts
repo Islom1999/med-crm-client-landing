@@ -13,6 +13,6 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     LayoutsRoutingModule,
     SharedModule,
-  ]
+  ],
 })
 export class LayoutsModule { }
