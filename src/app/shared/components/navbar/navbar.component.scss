@@ -1,3 +1,12 @@
+header {
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	top: 0;
+	left: auto;
+	right: auto;
+}
+
 .header-top {
 	background-color: var(--mc-023B71);
 	padding: 20px 0;
