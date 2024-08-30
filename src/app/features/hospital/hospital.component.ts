@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
 	selector: 'app-hospital',
@@ -15,5 +16,7 @@ export class HospitalComponent {
 			this.openIndex = index;
 		}
 	}
-
+	ngOnInit() {
+		AOS.init();
+	}
 }
