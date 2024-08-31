@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import * as AOS from 'aos';
 
 @Component({
 	standalone: true,
@@ -11,5 +12,7 @@ import { RouterModule } from '@angular/router';
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HospitalSliderComponent {
-
+	ngOnInit() {
+		AOS.init();
+	}
 }
