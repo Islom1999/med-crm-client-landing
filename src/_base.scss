@@ -49,3 +49,11 @@ Public button styles
 	font-size: 18px;
 	font-weight: 600;
 }
+
+// _Base styles start @media ==========================
+@media (max-width: 1800px) {
+	.container {
+		max-width: 1400px;
+	}
+}
+// _Base styles end @media ============================

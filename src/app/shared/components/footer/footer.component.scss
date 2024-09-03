@@ -209,3 +209,40 @@ footer {
 		}
 	}
 }
+
+
+@media (max-width: 1750px) {
+	.footer-series {
+		column-gap: 50px;
+	}
+
+	.footer-top .footer-top__wrap h1 {
+		font-size: 40px;
+	}
+
+	.top__contact-tel {
+		.tel-numb {
+			a {
+				font-size: 25px;
+			}
+			p {
+				font-size: 25px;
+			}
+		}
+	}
+	.tel-icon {
+		width: 70px;
+		img {
+      width: 100%;
+		}
+	}
+	.top__contact-tel {
+		column-gap: 20px;
+	}
+	.footer-top__contact button{
+		font-size: 20px;
+		line-height: 100%;
+		height: auto;
+		padding: 10px 20px;
+	}
+}
