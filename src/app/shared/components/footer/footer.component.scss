@@ -225,24 +225,64 @@ footer {
 			a {
 				font-size: 25px;
 			}
+
 			p {
 				font-size: 25px;
 			}
 		}
 	}
+
 	.tel-icon {
 		width: 70px;
+
 		img {
-      width: 100%;
+			width: 100%;
 		}
 	}
+
 	.top__contact-tel {
 		column-gap: 20px;
 	}
-	.footer-top__contact button{
+
+	.footer-top__contact button {
 		font-size: 20px;
 		line-height: 100%;
 		height: auto;
 		padding: 10px 20px;
+	}
+}
+
+@media (max-width: 1500px) {
+	.footer-top {
+		max-width: calc(100% - 70px);
+	}
+
+	.footer-series {
+		gap: 100px;
+
+		.series__item {
+			&:first-child {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.footer-wrap {
+		flex-direction: column;
+		gap: 50px;
+	}
+
+	.footer-series {
+		.series__item {
+			&:first-child {
+				display: block;
+			}
+		}
+	}
+
+	.footer-top__contact {
+		column-gap: 25px;
 	}
 }
