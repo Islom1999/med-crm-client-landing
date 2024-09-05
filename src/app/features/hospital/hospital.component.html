@@ -4,7 +4,7 @@
 			<div class="home-about" data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="500"
 				data-aos-duration="500">
 				<h1><span>GLOBAL HEALTHCARE</span> sizning sog’ligingiz haqida qayg’urad</h1>
-				<a routerLink="">Batafsil ma’lumot</a>
+				<a routerLink="/about">Batafsil ma’lumot</a>
 			</div>
 			<div class="home-img" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
 				data-aos-duration="500">
@@ -61,7 +61,7 @@
 	<h1>Bizning Shifokorlarimiz</h1>
 </div>
 <app-hospital-slider></app-hospital-slider>
-<div class="more-link">
+<div class="more-link" routerLink="/doctors">
 	<h3>Barchasini ko’rish</h3>
 	<img src="assets/images/arrow-right.svg" alt="arrow link icon">
 </div>
@@ -111,7 +111,7 @@
 		</div>
 	</div>
 </div>
-<div class="more-link">
+<div class="more-link" routerLink="/service">
 	<h3>Barchasini ko’rish</h3>
 	<img src="assets/images/arrow-right.svg" alt="arrow link icon">
 </div>
@@ -161,7 +161,7 @@
 							</div>
 						</div>
 						<h1 class="card-title">Global Healthcare ochilish marosimi</h1>
-						<a routerLink="" class="more-link"><span>Batafsil</span><span><img src="assets/images/line-arrow-right.svg"
+						<a [routerLink]="['/news','id']" class="more-link"><span>Batafsil</span><span><img src="assets/images/line-arrow-right.svg"
 									alt="more link img"></span></a>
 					</div>
 				</div>
@@ -183,7 +183,7 @@
 							</div>
 						</div>
 						<h1 class="card-title">Global Healthcare ochilish marosimi</h1>
-						<a routerLink="" class="more-link"><span>Batafsil</span><span><img src="assets/images/line-arrow-right.svg"
+						<a [routerLink]="['/news','id']" class="more-link"><span>Batafsil</span><span><img src="assets/images/line-arrow-right.svg"
 									alt="more link img"></span></a>
 					</div>
 				</div>
@@ -205,12 +205,12 @@
 							</div>
 						</div>
 						<h1 class="card-title">Global Healthcare ochilish marosimi</h1>
-						<a routerLink="" class="more-link"><span>Batafsil</span><span><img src="assets/images/line-arrow-right.svg"
+						<a [routerLink]="['/news','id']" class="more-link"><span>Batafsil</span><span><img src="assets/images/line-arrow-right.svg"
 									alt="more link img"></span></a>
 					</div>
 				</div>
 			</div>
-			<div class="more-link">
+			<div class="more-link" routerLink="/news">
 				<h3>Barchasini ko’rish</h3>
 				<img src="assets/images/arrow-right.svg" alt="arrow link icon">
 			</div>
