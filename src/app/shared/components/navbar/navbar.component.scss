@@ -175,10 +175,52 @@ nav {
 	}
 }
 
+.mobile-nav {
+	display: none;
+	background: rgb(2, 59, 113);
+}
+
+.mobile-nav__logo {
+	display: block;
+	text-align: center;
+
+	span {
+		display: block;
+	}
+}
+
 @media (max-width: 1750px) {
-		nav {
-			position: static;
-			transform: translateX(0);
-			margin: 0;
+	nav {
+		position: static;
+		transform: translateX(0);
+		margin: 0;
+	}
+}
+
+@media (max-width: 1200px) {
+	header {
+		display: none;
+	}
+
+	.mobile-nav {
+		display: block;
+		padding: 15px;
+
+		.movile-nav__wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			a {
+				color: white;
+			}
 		}
+	}
+
+	.mobile-nav__bars {
+		margin-left: auto;
+		background-color: transparent;
+		border: none;
+		width: 30px;
+		height: 30px;
+	}
 }

@@ -62,14 +62,38 @@ Public button styles
 		max-width: 1200px;
 	}
 }
-@media (max-width: 1300px)  {
-		.container {
-			max-width: 1000px;
-		}
-}	
-@media (max-width: 1050px) {
-	 .container {
-		padding: 20px 0;
-	 }
+
+@media (max-width: 1300px) {
+	.container {
+		max-width: 1000px;
+	}
 }
+
+@media (max-width: 1100px) {
+	.container {
+		max-width: 768px;
+	}
+}
+
+@media (max-width: 820px) {
+	.container {
+		padding: 0 25px;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.page-title-block  {
+		h1{ 
+			line-height: 130%;
+			font-size: 30px;
+		}
+		h3 {
+			font-size: 20px;
+			line-height: 130%;
+		}
+	}
+
+}
+
 // _Base styles end @media ============================

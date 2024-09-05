@@ -90,6 +90,7 @@
 	padding: 15px 25px;
 	text-decoration: none;
 	margin: 0 auto;
+	text-align: center;
 }
 
 @media (max-width: 1800px) {
@@ -97,10 +98,35 @@
 		gap: 25px;
 	}
 }
-@media (max-width: 1300px)  {
+
+@media (max-width: 1300px) {
 	.doctor-cards {
 		grid-template-columns: auto auto;
 		flex-wrap: wrap;
 		grid-template-areas: '. .';
+	}
+}
+
+@media (max-width: 768px) {
+	.user-card-btn {
+		font-size: 16px;
+		line-height: 130%;
+	}
+
+	.doctor-cards {
+		.card {
+			padding: 20px;
+		}
+	}
+}
+
+@media (max-width:600px) {
+	.doctor-cards {
+		display: flex;
+		flex-direction: column;
+
+		.card {
+			padding: 30px 35px;
+		}
 	}
 }
