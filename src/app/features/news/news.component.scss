@@ -31,6 +31,9 @@
 }
 
 .card {
+	img{
+		border-radius: 20px;
+	}
 	.card-data {
 		top: 0;
 		left: 30px;
@@ -54,6 +57,7 @@
 		border-bottom: 1px solid;
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		column-gap: 45px;
 		color: #E3E3E3;
 		padding: 10px;

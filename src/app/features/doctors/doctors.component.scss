@@ -11,6 +11,12 @@
 		position: relative;
 		width: 100%;
 		padding: 30px 35px;
+		img{
+			width: 100%;
+			// height: 50%;
+			object-fit: cover;
+			border-radius: 35px;
+		}
 
 		&::before {
 			content: '';

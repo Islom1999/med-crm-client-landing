@@ -2,15 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NewsComponent } from './news.component';
 import { Routes, RouterModule } from '@angular/router';
+import { PageType } from '../../../enumerations';
 
 const routes: Routes = [
   {
     path: '',
-    component: NewsComponent
+    component: NewsComponent,
+    data: {page_type: PageType.list}
   },
   {
     path: ':id',
-    component: NewsComponent
+    component: NewsComponent,
+    data: {page_type: PageType.detail}
   }
 ];
 

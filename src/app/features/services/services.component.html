@@ -1,133 +1,18 @@
 <div class="h180"></div>
 <div class="container">
 	<div class="page-title-block" data-aos="fade-up">
-		<h1>Bizning GLOBAL HEALTHCARE shifoxonamiz</h1>
-		<h3>
-			Abat Steklo - shisha va shisha buyumlar ishlab chiqarishga ixtisoslashgan kompaniya. 2013-yilda tashkil etilgan
-			kompaniya bir necha yillardan buyon o‘z mijozlariga yuqori sifatli shisha yechimlarini taqdim etib kelmoqda.
-			Ularning xizmatlari oyna, eshik, oyna va dekorativ oyna buyumlari kabi turli xil oyna mahsulotlarini ishlab
-			chiqarishni o'z ichiga oladi. Abat Steklo sifat va mijozlar ehtiyojini qondirishga sodiqligi bilan mashhur bo'lib,
-			ularni shisha bilan bog'liq barcha ehtiyojlar uchun ishonchli tanlovga aylantiradi.
-		</h3>
+		<img *ngIf="$header.image" [src]="getView($header.image)" alt="">
+		<h1 [innerHTML]="$header.title"></h1>
+		<h3 [innerHTML]="$header.descr"></h3>
 	</div>
 	<div class="service-cards">
-		<div class="card" data-aos="fade-up">
+		<div class="card" data-aos="fade-up" *ngFor="let item of $service | async">
 			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
+				<img [src]="getView(item.image!)" alt="service card icon">
 			</div>
 			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
-				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-			</div>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="card-icon">
-				<img src="assets/images/sc1-icon.svg" alt="service card icon">
-			</div>
-			<div class="card-about">
-				<h2>Nefrologiya</h2>
-				<h4>1222 dan ortiq buyrak transplantatsiyasi</h4>
+				<h2>{{item.name}}</h2>
+				<h4 [innerHTML]="item.descr"></h4>
 				<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
 			</div>
 		</div>

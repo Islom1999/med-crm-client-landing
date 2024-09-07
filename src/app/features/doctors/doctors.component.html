@@ -1,71 +1,25 @@
 <div class="h180"></div>
 <div class="container">
 	<div class="page-title-block" data-aos="fade-up">
-		<h1>Bizning malakali shifokorlarimiz bilan tanishing</h1>
-		<h3>Nexus School - Bizning markazimiz 2021-yil 30- sentyabrda tashkil etilgan. Mana shu davr mobaynida Harvard
-			School o’quv markazi shiddat bilan rivojlanib bormoqda. Bu yerda muhit, ta’lim olish borasidagi.</h3>
+		<h1 [innerHTML]="$header.title"></h1>
+		<h3 [innerHTML]="$header.descr"></h3>
 	</div>
 
 	<div class="doctor-cards">
-		<div class="card" data-aos="fade-up">
-			<div class="user-card">
-				<img src="assets/images/doctor.png" alt="doctor img">
-				<div class="user-card__about">
-					<h3>Micheal Scofield</h3>
-					<h4>Jarroh</h4>
+		<ng-container *ngIf="($doctors | async)?.length">
+			<div class="card" data-aos="fade-up" *ngFor="let item of $doctors | async">
+				<div class="user-card">
+					<img [src]="getView(item.image)" alt="doctor img">
+					<div class="user-card__about">
+						<h3>{{item.fullname}}</h3>
+						<h4>{{item.role.name}}</h4>
+					</div>
 				</div>
+				<a [routerLink]="['/service','doctor',item.id]" class="user-card-btn">Konsultatsiyaga yozilish</a>
 			</div>
-			<a [routerLink]="['/service','doctor','id']" class="user-card-btn">Konsultatsiyaga yozilish</a>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="user-card">
-				<img src="assets/images/doctor.png" alt="doctor img">
-				<div class="user-card__about">
-					<h3>Micheal Scofield</h3>
-					<h4>Jarroh</h4>
-				</div>
-			</div>
-			<a [routerLink]="['/service','doctor','id']" class="user-card-btn">Konsultatsiyaga yozilish</a>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="user-card">
-				<img src="assets/images/doctor.png" alt="doctor img">
-				<div class="user-card__about">
-					<h3>Micheal Scofield</h3>
-					<h4>Jarroh</h4>
-				</div>
-			</div>
-			<a [routerLink]="['/service','doctor','id']" class="user-card-btn">Konsultatsiyaga yozilish</a>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="user-card">
-				<img src="assets/images/doctor.png" alt="doctor img">
-				<div class="user-card__about">
-					<h3>Micheal Scofield</h3>
-					<h4>Jarroh</h4>
-				</div>
-			</div>
-			<a [routerLink]="['/service','doctor','id']" class="user-card-btn">Konsultatsiyaga yozilish</a>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="user-card">
-				<img src="assets/images/doctor.png" alt="doctor img">
-				<div class="user-card__about">
-					<h3>Micheal Scofield</h3>
-					<h4>Jarroh</h4>
-				</div>
-			</div>
-			<a [routerLink]="['/service','doctor','id']" class="user-card-btn">Konsultatsiyaga yozilish</a>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="user-card">
-				<img src="assets/images/doctor.png" alt="doctor img">
-				<div class="user-card__about">
-					<h3>Micheal Scofield</h3>
-					<h4>Jarroh</h4>
-				</div>
-			</div>
-			<a [routerLink]="['/service','doctor','id']" class="user-card-btn">Konsultatsiyaga yozilish</a>
-		</div>
+		</ng-container>
+		<ng-container *ngIf="!($doctors | async)">
+			<h1>Ma'lumot yo'q</h1>
+		</ng-container>
 	</div>
 </div>
