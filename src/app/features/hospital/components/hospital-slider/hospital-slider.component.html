@@ -1,14 +1,17 @@
 <div class="container">
-	<div class="doctor-cards">
-		<div class="card" data-aos="fade-up" *ngFor="let item of $doctors | async">
-			<div class="user-card">
-				<img [src]="getView(item.image)" alt="doctor img">
-				<div class="user-card__about">
-					<h3>{{item.fullname}}</h3>
-					<h4>{{item.role.name}}</h4>
+
+	<div class="doctor-cards grid row-gap-3">
+		<div class=" col-12 md:col-6 lg:col-4 xl:col-3 px-3" *ngFor="let item of $doctors | async">
+			<div class="card" data-aos="fade-up">
+				<div class="user-card">
+					<img [src]="getView(item.image)" alt="doctor img">
+					<div class="user-card__about">
+						<h3>{{item.fullname}}</h3>
+						<h4>{{item.role.name}}</h4>
+					</div>
 				</div>
+				<a [routerLink]="['/service','doctor',item.id]" class="user-card-btn">Konsultatsiyaga yozilish</a>
 			</div>
-			<a [routerLink]="['/service','doctor', item.id!]" class="user-card-btn">Konsultatsiyaga yozilish</a>
 		</div>
 	</div>
 </div>

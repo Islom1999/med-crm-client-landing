@@ -4,13 +4,17 @@
 		<h1 [innerHTML]="$header.title"></h1>
 		<h3 [innerHTML]="$header.descr"></h3>
 	</div>
-	<div class="rooms-cards">
-		<div class="card" data-aos="fade-up" *ngFor="let item of $service | async">
-			<img [src]="getView(item.image!)" alt="room image">
-			<div class="card-about">
-				<h3>{{item.name}}</h3>
-				<p [innerHTML]="item.descr"></p>
+	<div class="rooms-cards grid row-gap-3">
+		<ng-container *ngFor="let item of $service | async">
+			<div class="col-12 md:col-6 xl:col-4 px-3">
+				<div class="card" data-aos="fade-up">
+					<img [src]="getView(item.image!)" alt="room image">
+					<div class="card-about">
+						<h3>{{item.name}}</h3>
+						<p [innerHTML]="item.descr"></p>
+					</div>
+				</div>
 			</div>
-		</div>
+		</ng-container>
 	</div>
 </div>
