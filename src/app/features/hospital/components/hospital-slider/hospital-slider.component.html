@@ -1,44 +1,14 @@
 <div class="container">
 	<div class="doctor-cards">
-		<div class="card" data-aos="fade-up">
+		<div class="card" data-aos="fade-up" *ngFor="let item of $doctors | async">
 			<div class="user-card">
-				<img src="assets/images/doctor.png" alt="doctor img">
+				<img [src]="getView(item.image)" alt="doctor img">
 				<div class="user-card__about">
-					<h3>Micheal Scofield</h3>
-					<h4>Jarroh</h4>
+					<h3>{{item.fullname}}</h3>
+					<h4>{{item.role.name}}</h4>
 				</div>
 			</div>
-			<a [routerLink]="['/service','doctor','id']" class="user-card-btn">Konsultatsiyaga yozilish</a>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="user-card">
-				<img src="assets/images/doctor.png" alt="doctor img">
-				<div class="user-card__about">
-					<h3>Micheal Scofield</h3>
-					<h4>Jarroh</h4>
-				</div>
-			</div>
-			<a [routerLink]="['/service','doctor','id']" class="user-card-btn">Konsultatsiyaga yozilish</a>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="user-card">
-				<img src="assets/images/doctor.png" alt="doctor img">
-				<div class="user-card__about">
-					<h3>Micheal Scofield</h3>
-					<h4>Jarroh</h4>
-				</div>
-			</div>
-			<a [routerLink]="['/service','doctor','id']" class="user-card-btn">Konsultatsiyaga yozilish</a>
-		</div>
-		<div class="card" data-aos="fade-up">
-			<div class="user-card">
-				<img src="assets/images/doctor.png" alt="doctor img">
-				<div class="user-card__about">
-					<h3>Micheal Scofield</h3>
-					<h4>Jarroh</h4>
-				</div>
-			</div>
-			<a [routerLink]="['/service','doctor','id']" class="user-card-btn">Konsultatsiyaga yozilish</a>
+			<a [routerLink]="['/service','doctor', item.id!]" class="user-card-btn">Konsultatsiyaga yozilish</a>
 		</div>
 	</div>
 </div>

@@ -24,9 +24,14 @@
 							<span>{{item.created_at | date : 'MM.dd.yyyy'}}</span>
 						</div>
 					</div>
-					<h1 class="card-title">{{item.title}}</h1>
-					<a [routerLink]="['/news', item.id]" class="more-link"><span>Batafsil</span><span><img src="assets/images/line-arrow-right.svg"
-								alt="more link img"></span></a>
+					<h1 class="card-title">{{item.title}} + {{'/news'+ item.id}}</h1>
+					<a [routerLink]="['/news',item.id]" class="more-link">
+						<span>Batafsil</span>
+						<span>
+							<img src="assets/images/line-arrow-right.svg"
+								alt="more link img">
+						</span>
+					</a>
 				</div>
 			</div>
 		</div>
