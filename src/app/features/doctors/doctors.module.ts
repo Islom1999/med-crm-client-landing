@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { CommonModule } from '@angular/common';
 import { DoctorsComponent } from './doctors.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -19,7 +20,7 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-
+		ProgressSpinnerModule,
     RouterModule.forChild(routes)
   ]
 })
