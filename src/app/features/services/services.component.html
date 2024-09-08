@@ -5,19 +5,24 @@
 		<h1 [innerHTML]="$header.title"></h1>
 		<h3 [innerHTML]="$header.descr"></h3>
 	</div>
-	<div class="service-cards grid row-gap-3">
-		<ng-container  *ngFor="let item of $service | async">
-			<div class="col-12 md:col-6 lg:col-4 xl:col-3 px-3">
+	<div class="service-cards grid row-gap-3 lg:row-gap-5">
+		<ng-container *ngFor="let item of $service | async">
+			<div class="col-12 md:col-6 lg:col-4 px-3">
 				<div class="card" data-aos="fade-up">
-					<div class="card-icon">
-						<img [src]="getView(item.image!)" alt="service card icon">
-					</div>
 					<div class="card-about">
-						<h2>{{item.name}}</h2>
-						<h4 [innerHTML]="item.descr"></h4>
-						<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
+						<div class="card-icon">
+							<img [src]="getView(item.image!)" alt="service card icon">
+						</div>
+						<h2 class="ellipsis_1">{{item.name}}</h2>
+						<h4 class="ellipsis_2" [innerHTML]="item.descr"></h4>
 					</div>
+					<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
 				</div>
+			</div>
+		</ng-container>
+		<ng-container *ngIf="!($service | async)">
+			<div class="spinner">
+				<p-progressSpinner ariaLabel="loading" />
 			</div>
 		</ng-container>
 	</div>
