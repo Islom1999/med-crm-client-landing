@@ -430,3 +430,17 @@ footer {
 	}
 
 }
+
+@media (max-width:450px) {
+	.footer-top__contact {
+		button {
+			font-size: 18px;
+		}
+	}
+}
+
+@media (max-width:370px) {
+	.footer-top {
+		max-width: 95%;
+	}
+}

@@ -119,3 +119,20 @@
 		}
 	}
 }
+
+@media (max-width:355px) {
+	.user-card-btn {
+		font-size: 16px;
+		line-height: 130%;
+	}
+
+	.user-card .user-card__about h3,
+	.user-card .user-card__about h4 {
+		font-size: 17px;
+		line-height: 130%;
+	}
+
+	.user-card .user-card__about {
+		padding: 15px 10px;
+	}
+}
