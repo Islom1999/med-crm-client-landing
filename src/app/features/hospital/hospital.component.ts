@@ -15,8 +15,26 @@ export class HospitalComponent {
 	$service!: Observable<IServices[]>
 	$doctors!: Observable<IStaff[]>
 	$news!: Observable<INews[]>
-
 	$params: HttpParams = new HttpParams();
+
+	$header_bottom: {image:string, count:number, title:string}[] = [
+		{image:'assets/images/item-icon1.svg', count:100, title:'Mamnun mijozlar'},
+		{image:'assets/images/item-icon1.svg', count:100, title:'Mamnun mijozlar'},
+		{image:'assets/images/item-icon1.svg', count:100, title:'Mamnun mijozlar'},
+		{image:'assets/images/item-icon1.svg', count:100, title:'Mamnun mijozlar'},
+	]
+	$client_comments: {image:string, star:number, name:string, comment:string}[] = [
+		{image:'assets/images/comment-card-bg.png', star:5, name:"Sara Tancredi", comment:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrysstandard dummy text ever since the 1500s,'},
+		{image:'assets/images/comment-card-bg.png', star:3, name:"Sara Tancredi", comment:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrysstandard dummy text ever since the 1500s,'},
+		{image:'assets/images/comment-card-bg.png', star:4, name:"Sara Tancredi", comment:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrysstandard dummy text ever since the 1500s,'},
+		{image:'assets/images/comment-card-bg.png', star:1, name:"Sara Tancredi", comment:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrysstandard dummy text ever since the 1500s,'},
+	]
+	$faq: {quession:string, answer:string}[] = [
+		{quession:'Nefrologiya qanday qilishim kerak?', answer:'Nefrologiya nefrosistemimizning qanday qilishim kerak? Nefrologiya, nefrosistemimizning qanday qilishimni olayda olgan vakti qilishimni boshqarish uchun yordam beradi. Nefrologiya qanday qilishim kerak? Nefrologiya, nefrosistemimizning qanday qil.'},
+		{quession:'Nefrologiya qanday qilishim kerak?', answer:'Nefrologiya nefrosistemimizning qanday qilishim kerak? Nefrologiya, nefrosistemimizning qanday qilishimni olayda olgan vakti qilishimni boshqarish uchun yordam beradi. Nefrologiya qanday qilishim kerak? Nefrologiya, nefrosistemimizning qanday qil.'},
+		{quession:'Nefrologiya qanday qilishim kerak?', answer:'Nefrologiya nefrosistemimizning qanday qilishim kerak? Nefrologiya, nefrosistemimizning qanday qilishimni olayda olgan vakti qilishimni boshqarish uchun yordam beradi. Nefrologiya qanday qilishim kerak? Nefrologiya, nefrosistemimizning qanday qil.'},
+		{quession:'Nefrologiya qanday qilishim kerak?', answer:'Nefrologiya nefrosistemimizning qanday qilishim kerak? Nefrologiya, nefrosistemimizning qanday qilishimni olayda olgan vakti qilishimni boshqarish uchun yordam beradi. Nefrologiya qanday qilishim kerak? Nefrologiya, nefrosistemimizning qanday qil.'},
+	]
 
 	constructor(
 		private _doctorService: DoctorsService,

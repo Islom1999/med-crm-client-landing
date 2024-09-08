@@ -3,27 +3,34 @@
 	<h1 [innerHTML]="$header.title"></h1>
 	<h3 [innerHTML]="$header.descr"></h3>
 </div>
-<div class="service-orders">
-	<div class="order-item" data-aos="fade-right">
-		<div class="order-item__icon">
-			<img src="assets/images/order-icon.svg" alt="order icon">
-		</div>
-		<div class="order-item__txt">
-			<h3>Xalqaro o’qitish tizimi <br> sertifikati ega</h3>
-		</div>
-	</div>
-	<div class="order-item" data-aos="fade-left">
-		<div class="order-item__icon">
-			<img src="assets/images/order-icon.svg" alt="">
-		</div>
-		<div class="order-item__txt">
-			<h3>Xalqaro o’qitish tizimi <br> sertifikati ega</h3>
+<div class="service-orders grid justify-content-center">
+
+	<div class="col-12 md:col-6 grid md:justify-content-end px-5">
+		<div class="order-item col-10 md:col-8 xl:col-6" data-aos="fade-right">
+			<div class="order-item__icon">
+				<img src="assets/images/order-icon.svg" alt="order icon">
+			</div>
+			<div class="order-item__txt">
+				<h3>Xalqaro o’qitish tizimi <br> sertifikati ega</h3>
+			</div>
 		</div>
 	</div>
+
+	<div class="col-12 md:col-6 grid md:justify-content-start px-5">
+		<div class="order-item col-10 md:col-8 xl:col-6" data-aos="fade-left">
+			<div class="order-item__icon">
+				<img src="assets/images/order-icon.svg" alt="">
+			</div>
+			<div class="order-item__txt">
+				<h3>Xalqaro o’qitish tizimi <br> sertifikati ega</h3>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 <div class="container">
-	<div class="about-desc">
+	<div class="about-desc grid">
 		<div class="about-desc__left" data-aos="fade-up">
 			<div class="about-desc__user">
 				<div class="desc-user">

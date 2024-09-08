@@ -1,23 +1,24 @@
 .service-orders {
 	margin-top: 60px;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	column-gap: 100px;
+	box-sizing: border-box;
+	// display: flex;
+	// align-items: flex-start;
+	// justify-content: center;
+	// column-gap: 100px;
 
 	.order-item {
 		border: 1px solid var(--mc-D6EBFE);
 		display: flex;
 
 		.order-item__icon {
-			width: 109px;
+			width: 30%;
 			height: 107px;
 			flex-shrink: 0;
 			padding: 20px;
 		}
 
 		.order-item__txt {
-			width: 338px;
+			width: 70%;
 			padding: 20px;
 			background-color: var(--mc-D6EBFE);
 
