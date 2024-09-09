@@ -18,6 +18,7 @@
 		width: 100%;
 		height: 100%;
 		position: relative;
+
 		&::after {
 			content: ' ';
 			position: absolute;
@@ -94,6 +95,7 @@
 			font-size: 26px;
 			font-weight: 600;
 			letter-spacing: 0.78px;
+			line-height: 130%;
 		}
 	}
 }
@@ -119,6 +121,81 @@
 			width: 26px;
 			height: 20px;
 			flex-shrink: 0;
+		}
+	}
+}
+
+@media (max-width:992px) {
+
+	.card {
+		.card-about {
+			h1.card-title {
+				font-size: 20px;
+			}
+		}
+	}
+
+	.more-link {
+		margin-top: 10px;
+
+		span {
+			&:first-child {
+				font-size: 16px;
+			}
+		}
+
+		img {
+			width: 26px;
+			height: 20px;
+			flex-shrink: 0;
+		}
+	}
+
+	.card {
+		.card-about__head {
+			padding-top: 0;
+		}
+	}
+}
+
+
+@media (max-width:992px) {
+	.card {
+
+		.card-about__head {
+			padding: 0px 0px 10px 0;
+		}
+	}
+
+	.card .card-about__head .item span {
+		font-size: 14px;
+	}
+
+	.card {
+		.card-about {
+			h1.card-title {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.card .card-data h1 {
+		font-size: 20px;
+	}
+
+	.news-cards {
+		.card {
+			.card-img {
+				&::after {
+					width: 5px;
+				}
+			}
+			.more-link {
+				img {
+					width: 18px;
+					height: 18px;
+				}
+			}
 		}
 	}
 }
