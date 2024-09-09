@@ -236,6 +236,7 @@
 .login-wrap {
 	width: 100%;
 	height: 90vh;
+	max-height: 1080px;
 	background: linear-gradient(185.83deg, rgb(0, 128, 247) 21.686%, rgb(0, 84, 161) 97.901%);
 	display: flex;
 	align-items: center;
@@ -248,6 +249,7 @@
 		justify-content: space-evenly;
 		flex-direction: column;
 		height: 100%;
+		padding: 0 50px;
 
 		h2 {
 			color: rgb(255, 255, 255);
