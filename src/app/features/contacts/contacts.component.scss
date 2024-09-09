@@ -23,63 +23,6 @@
 		padding: 50px;
 		border-radius: 26px;
 		background: rgba(0, 130, 251, 0.05);
-
-		.form-series {
-			&>*:not(:last-child) {
-				margin-bottom: 30px;
-			}
-		}
-	}
-}
-
-.form-series {
-	.series {
-		label {
-			display: block;
-			color: rgb(68, 68, 68);
-			font-size: 18px;
-			font-weight: 400;
-			line-height: 27px;
-			letter-spacing: 0%;
-			text-align: left;
-		}
-
-		input {
-			width: 100%;
-			border: 1px solid rgb(237, 237, 237);
-			border-radius: 18px;
-			background: rgb(255, 255, 255);
-			padding: 30px;
-			color: black;
-			font-size: 24px;
-			font-weight: 400;
-			line-height: 36px;
-		}
-	}
-
-	textarea {
-		padding: 30px;
-		width: 100%;
-		height: 268px;
-		border: 1px solid rgb(237, 237, 237);
-		border-radius: 18px;
-		background: rgb(255, 255, 255);
-		color: black;
-		font-size: 24px;
-		font-weight: 400;
-		line-height: 36px;
-	}
-
-	button {
-		border-radius: 16px;
-		background: linear-gradient(90.00deg, rgb(0, 130, 251), rgb(0, 77, 149) 100%);
-		color: rgb(255, 255, 255);
-		font-size: 24px;
-		font-weight: 600;
-		line-height: 36px;
-		border: none;
-		width: 100%;
-		padding: 20px;
 	}
 }
 
@@ -107,24 +50,6 @@
 			border-radius: 50px;
 			background: rgba(0, 130, 251, 0.19);
 		}
-	}
-}
-
-.series {
-
-	a,
-	.series-about>h3 {
-		color: rgb(66, 66, 66);
-		font-size: 28px;
-		font-weight: 500;
-		line-height: 30px;
-	}
-
-	p {
-		color: rgb(182, 182, 182);
-		font-size: 20px;
-		font-weight: 400;
-		line-height: 30px;
 	}
 }
 
@@ -168,14 +93,6 @@
 		}
 	}
 
-	.form-series {
-		.series {
-			label {
-				padding-left: 15px;
-			}
-		}
-	}
-
 	.adress-series>*:not(:last-child) {
 		margin-bottom: 20px;
 	}
@@ -183,27 +100,10 @@
 	.contact-map {
 		margin-top: 40px;
 	}
-
-	.form-series {
-		.series {
-			input {
-				font-size: 16px;
-				padding: 20px;
-			}
-		}
-	}
-
 	.form-series textarea {
 		padding: 20px;
 		font-size: 16px;
 		height: 200px;
-	}
-
-	.form-series button {
-		display: block;
-		font-size: 16px;
-		padding: 12px;
-		width: 100%;
 	}
 
 	.series a,
