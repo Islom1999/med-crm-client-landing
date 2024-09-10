@@ -7,22 +7,136 @@
 			</div>
 		</div>
 		<div class="login-form">
-			<form action="" class="form-series">
-				<h2>Ro’yxatdan o’tish</h2>
-				<div class="series">
-					<label for="name">Ism</label>
-					<input type="text" placeholder="ismingiz">
+			<ng-container>
+				<div class="flex align-items-center justify-content-center">
+					<div class="col-12">
+						<ng-container *ngIf="page_type == 'register'">
+							<form [formGroup]="$form_register" (submit)="submit()" class="form-series">
+								<div class="p-fluid p-formgrid grid">
+									<div class="col-12">
+										<h2>Ro’yxatdan o’tish</h2>
+									</div>
+	
+									<div class="series field col-12 md:col-6">
+										<label for="pass">Seriya (ixtiyoriy)</label>
+										<!-- <input pInputText type="text" placeholder="AB 0000000" mask="(aa) 9999999"> -->
+										<p-inputMask  
+											(change)="setPerson()" 
+											mask="(aa) 9999999"
+											formControlName="series_document" 
+										>
+										</p-inputMask>
+									</div>
+									<div class="series field col-12 md:col-6">
+										<label for="re_pass">Tug'ilgan sana (ixtiyoriy)</label>
+										<input pInputText (blur)="setPerson()" formControlName="date_of_birth" type="date">	
+									</div>
+	
+									<div class="series field col-12 md:col-6">
+										<label for="name">Ism familiya</label>
+										<input type="text" formControlName="fullname" placeholder="Ism familiya">
+									</div>
+									<div class="series field col-12 md:col-6">
+										<label for="name">Manzil</label>
+										<input pInputText type="text" formControlName="address" placeholder="Manzil">
+									</div>
+	
+									<div class="series field col-12 md:col-6">
+										<label for="pass">Raqam</label>
+										<!-- <input pInputText type="text" placeholder="+998(90)999 9999 " mask="(aa) 9999999"> -->
+										<p-inputMask 
+											mask="(99) 999-99-99" 
+											formControlName="phone" 
+											[readonly]="true"
+											class="">
+										</p-inputMask>
+									</div>
+									<div class="series field col-12 md:col-6">
+										<label for="pass">Tasdiqlash kodi</label>
+										<!-- <input pInputText type="text" placeholder="0000 " mask="(aa) 9999999"> -->
+										<p-inputMask 
+											mask="9999" 
+											formControlName="code" 
+											class="">
+										</p-inputMask>
+									</div>
+								</div>
+								<div class="grid">
+									<div class="col-6 md:col-6 mb-3">
+										<button class="button-secondary" pButton label="Ortga"  (click)="back()"></button>
+									</div>
+									<div class="col-6 md:col-6 mb-3">
+										<button class=" mb-3" pButton type="submit" label="Ro’yxatdan o’tish"></button>
+									</div>
+								</div>
+							</form>
+						</ng-container>
+
+						<ng-container *ngIf="page_type == 'login'">
+							<form [formGroup]="$form_login" (submit)="submit()" class="form-series">
+								<div class="p-fluid p-formgrid grid">
+									<div class="col-12">
+										<h2>Kirish</h2>
+									</div>
+	
+									<div class="series field col-12 md:col-12">
+										<label for="pass">Raqam</label>
+										<p-inputMask 
+											mask="(99) 999-99-99" 
+											formControlName="phone"
+											[readonly]="true" 
+											class="">
+										</p-inputMask>
+									</div>
+									<div class="series field col-12 md:col-12">
+										<label for="pass">Tasdiqlash kodi</label>
+										<!-- <input pInputText type="text" placeholder="0000 " mask="(aa) 9999999"> -->
+										<p-inputMask 
+											mask="9999" 
+											formControlName="code" 
+											class="">
+										</p-inputMask>
+									</div>
+									
+								</div>
+								<div class="grid">
+									<div class="col-6 md:col-6 mb-3">
+										<button class="button-secondary" pButton label="Ortga" (click)="back()"></button>
+									</div>
+									<div class="col-6 md:col-6 mb-3">
+										<button class=" mb-3" pButton type="submit" label="Ro’yxatdan o’tish"></button>
+									</div>
+								</div>
+							</form>
+						</ng-container>
+
+						<ng-container *ngIf="page_type == 'phone'">
+							<form [formGroup]="$form_phone" (submit)="submit()" class="form-series">
+								<div class="p-fluid p-formgrid grid">
+									<div class="col-12">
+										<h2>Kirish</h2>
+									</div>
+	
+									<div class="series field col-12 md:col-12">
+										<label for="pass">Raqam</label>
+										<!-- <input pInputText type="text" placeholder="+998(90)999 9999 " mask="(aa) 9999999"> -->
+										<p-inputMask 
+											mask="(99) 999-99-99" 
+											formControlName="phone">
+										</p-inputMask>
+									</div>
+									
+								</div>
+								<button type="submit">Kirish</button>
+							</form>
+						</ng-container>
+					</div>
 				</div>
-				<div class="series">
-					<label for="pass">Parol</label>
-					<input type="password" placeholder="parol">
-				</div>
-				<div class="series">
-					<label for="re_pass">Parol</label>
-					<input type="password" placeholder="parolni tasdiqlash">
-				</div>
-				<button type="submit">Ro’yxatdan o’tish</button>
-			</form>
+			</ng-container>
+
+			<ng-container></ng-container>
+			
+			
 		</div>
 	</div>
 </div>

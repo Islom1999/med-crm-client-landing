@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { tap } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { jwtDecode } from "jwt-decode";
 import { environment } from '../../environments/environment';
-import { Login } from '../../types/login.type';
+import { LoginPhone, LoginPhoneVerify } from '../../types/login.type';
 import { Tokens } from '../../types/token.type';
+import { IUserExtraData } from '../../interfaces/user_extra_data';
 
 @Injectable({
   providedIn: 'root',
@@ -18,9 +19,25 @@ export class AuthService {
     private router: Router
   ) {}
 
-  login(data: Login) {
+  getUserData(series_document: string, date_of_birth: string): Observable<IUserExtraData> {
+    return this.http.get<IUserExtraData>(`${environment.apiUrl}/client/auth/extra/data`, {params: {series_document,date_of_birth}});
+  }
+
+  phone(data: LoginPhone) {
     return this.http
-      .post<Tokens>(`${environment.apiUrl}/auth/signin/local`, data)
+      .post<{"success": boolean,"message": string,"user": {"is_verify": boolean}}>(`${environment.apiUrl}/client/auth/login/phone`, data)
+      .pipe(
+        // tap((tokens) => {
+        //   if (tokens.access_token && tokens.refresh_token) {
+        //     this.setTokens(tokens);
+        //   }
+        // })
+      );
+  }
+
+  phoneVerify(data: LoginPhoneVerify) {
+    return this.http
+      .post<Tokens>(`${environment.apiUrl}/client/auth/login/phone/verify`, data)
       .pipe(
         tap((tokens) => {
           if (tokens.access_token && tokens.refresh_token) {
@@ -29,6 +46,18 @@ export class AuthService {
         })
       );
   }
+
+  // login(data: Login) {
+  //   return this.http
+  //     .post<Tokens>(`${environment.apiUrl}/client/auth/login/phone`, data)
+  //     .pipe(
+  //       tap((tokens) => {
+  //         if (tokens.access_token && tokens.refresh_token) {
+  //           this.setTokens(tokens);
+  //         }
+  //       })
+  //     );
+  // }
 
   refreshToken() {
     return this.http

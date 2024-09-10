@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor, ErrorInterceptor } from './core';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
 	declarations: [
@@ -17,7 +18,9 @@ import { AuthInterceptor, ErrorInterceptor } from './core';
 		AppRoutingModule,
 		CoreModule,
 		SharedModule,
-		HttpClientModule
+		HttpClientModule,
+		
+		ButtonModule
 	],
 	providers: [
 		// { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
