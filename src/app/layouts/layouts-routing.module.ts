@@ -39,6 +39,10 @@ const routes: Routes = [
 				path: 'order',
 				loadChildren: () => import('../features').then(m => m.AppointmentModule)
 			},
+			{
+				path: 'profile',
+				loadChildren: () => import('../features').then(m => m.ProfileModule)
+			},
 		]
 	}
 ];

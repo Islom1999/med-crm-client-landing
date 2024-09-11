@@ -53,8 +53,11 @@
 						<img src="assets/images/globus-icon.svg" alt="language">
 						<h3>O’zbekcha</h3>
 					</div> -->
-					<button type="button" class="mc-btn" routerLink="/auth/login">
+					<button *ngIf="!isRegister()" type="button" class="mc-btn" routerLink="/auth/login">
 						Ro’xatdan o’tish
+					</button>
+					<button class="profile-btn" *ngIf="isRegister()" routerLink="/profile">
+						<span class="pi pi-user profile-icon"></span>
 					</button>
 				</div>
 			</div>

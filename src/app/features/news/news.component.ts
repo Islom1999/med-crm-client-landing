@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { INews } from '../../../interfaces';
 import { ActivatedRoute } from '@angular/router';
 import { PageType } from '../../../enumerations';
+import * as AOS from 'aos'
 
 @Component({
   selector: 'app-news',
@@ -24,6 +25,8 @@ export class NewsComponent implements OnInit {
   ){}
 
   ngOnInit(): void {
+    AOS.init()
+
     this.page_type = this.route.snapshot.data['page_type'];
     this.id = this.route.snapshot.params['id'];
 

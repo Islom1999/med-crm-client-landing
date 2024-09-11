@@ -82,7 +82,6 @@ export class RegisterComponent implements OnInit {
   }
 
   submit() {
-    console.log('sdfssdfsd: submit')
     if (this.page_type == PageType.phone) {
       if (this.$form_phone.valid) {
         let phone = this.$form_phone.get('phone')?.value;
@@ -131,6 +130,15 @@ export class RegisterComponent implements OnInit {
           phone = phone.toString().replace(/[()\s-]/g, '');
           data.phone = parseInt(phone, 10)
 
+          if(!data.series_document){
+            delete data.series_document
+          }else{
+            data.series_document = data.series_document.replace(/[()\s]/g, '').toUpperCase();
+          }
+          if(!data.date_of_birth){
+            delete data.date_of_birth
+          }
+
           this.disableBtn = true;
           this.phoneVerify({ ...data, phone: data.phone })
         }
@@ -169,7 +177,7 @@ export class RegisterComponent implements OnInit {
   }
 
   phoneVerify(data: LoginPhoneVerify) {
-    this._authService.phoneVerify({ phone: 972446972, code: '0000' }).subscribe(data => {
+    this._authService.phoneVerify(data).subscribe(data => {
       this.router.navigate(['/'])
     })
   }

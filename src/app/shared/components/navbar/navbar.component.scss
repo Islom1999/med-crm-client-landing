@@ -19,6 +19,37 @@ header {
 	justify-content: space-between;
 }
 
+// ProfileBtn
+.profile-btn {
+	display: inline-flex;
+	align-items: center;
+	background: linear-gradient(90deg, #0082FB 0%, #004D95 100%); /* Tugma fon rangi */
+	color: white; /* Matn va ikon rang */
+	border: none;
+	border-radius: 50%; /* Yuvarlak tugma */
+	padding: 10px;
+	margin-right: 25px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	box-sizing: border-box;
+}
+
+.profile-btn:hover {
+	background: linear-gradient(90deg, #004D95 0%, #0082FB 100%);
+}
+
+
+.profile-btn:active {
+	background: linear-gradient(90deg, #004D95 0%, #0082FB 100%);
+	transform: scale(1.05);
+}
+
+
+.profile-icon {
+	font-size: 30px;
+}
+// 
+
 
 .contact {
 	display: flex;
