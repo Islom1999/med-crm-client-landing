@@ -23,10 +23,13 @@ header {
 .profile-btn {
 	display: inline-flex;
 	align-items: center;
-	background: linear-gradient(90deg, #0082FB 0%, #004D95 100%); /* Tugma fon rangi */
-	color: white; /* Matn va ikon rang */
+	background: linear-gradient(90deg, #0082FB 0%, #004D95 100%);
+	/* Tugma fon rangi */
+	color: white;
+	/* Matn va ikon rang */
 	border: none;
-	border-radius: 50%; /* Yuvarlak tugma */
+	border-radius: 50%;
+	/* Yuvarlak tugma */
 	padding: 10px;
 	margin-right: 25px;
 	cursor: pointer;
@@ -48,6 +51,7 @@ header {
 .profile-icon {
 	font-size: 30px;
 }
+
 // 
 
 
@@ -240,18 +244,11 @@ nav {
 		.movile-nav__wrap {
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: space-between;
+
 			a {
 				color: white;
 			}
 		}
-	}
-
-	.mobile-nav__bars {
-		margin-left: auto;
-		background-color: transparent;
-		border: none;
-		width: 30px;
-		height: 30px;
 	}
 }

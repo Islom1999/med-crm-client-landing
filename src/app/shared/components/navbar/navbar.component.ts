@@ -2,17 +2,17 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../../auth/auth.service';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+	selector: 'app-navbar',
+	templateUrl: './navbar.component.html',
+	styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  constructor(
-    private authService: AuthService
-  ){}
+	constructor(
+		private authService: AuthService
+	) { }
 
-  isRegister(){
-    return this.authService.isAuthenticated()
-  }
-
+	isRegister() {
+		return this.authService.isAuthenticated()
+	}
+	sidebar: boolean = false;
 }
