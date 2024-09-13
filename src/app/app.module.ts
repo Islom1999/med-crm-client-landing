@@ -7,20 +7,19 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor, ErrorInterceptor } from './core';
-import { ButtonModule } from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
 	declarations: [
 		AppComponent,	
 	],
 	imports: [
+		BrowserAnimationsModule,
 		BrowserModule,
 		AppRoutingModule,
 		CoreModule,
 		SharedModule,
 		HttpClientModule,
-		
-		ButtonModule
 	],
 	providers: [
 		{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

@@ -1,7 +1,66 @@
 <div class="grid">
     <div class="col-12 md:col-12">
         <div class="card appointment-card">
+
+            <!-- List hamasi chiqadigan joyi -->
+            <ng-container *ngIf="page_type == 'list'">
+                <ng-container *ngIf="($history | async) as history; else loading">
+                    <ng-container *ngFor="let item of history">
+                        <p-card [header]="(item.date | date : 'dd.MM.YYYY') ?? 'Sana balgilanmagan'" [subheader]="item.patient.fullname">
+                            <ng-template pTemplate="header">
+                            </ng-template>  
+    
+                            doktor: {{item.appointment.staff.fullname}} <br>
+                            tashxis egasi: {{item.staff.fullname}} <br>
+                            tashxis sanasi: {{item.date | date : 'dd.MM.YYYY'}} <br>
+                            xizmat: {{item.appointment.service.name}} <br>
+                            tashxis tasnifi: {{item.name}} <br>
+                            <!-- <p [innerHTML]="item.descr"></p> -->
+                             <button [routerLink]="['/profile', 'history', item.id, 'history']" class="btn">batafsil</button>
+    
+                            <ng-template pTemplate="footer">
+                                <div class="flex gap-3 mt-1">
+                                    <!-- <p-button label="Cancel" severity="secondary" class="w-full" styleClass="w-full" />
+                                    <p-button label="Save" class="w-full" styleClass="w-full" /> -->
+                                </div>
+                            </ng-template> 
+                        </p-card>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+
+            <!-- List bittasi chiqadigan joyi -->
+            <ng-container *ngIf="page_type == 'detail'">
+                <ng-container *ngIf="($history_detail | async) as history; else loading">
+                        <p-card [header]="(history.date | date : 'dd.MM.YYYY') ?? 'Sana balgilanmagan'" [subheader]="history.patient.fullname">
+                            <ng-template pTemplate="header">
+                            </ng-template>  
+                            doktor: {{history.appointment.staff.fullname}} <br>
+                            tashxis egasi: {{history.staff.fullname}} <br>
+                            tashxis sanasi: {{history.date | date : 'dd.MM.YYYY'}} <br>
+                            xizmat: {{history.appointment.service.name}} <br>
+                            tashxis tasnifi: {{history.name}} <br>
+                            <p [innerHTML]="history.descr"></p>
+    
+                            <ng-template pTemplate="footer">
+                                <div class="flex gap-3 mt-1">
+                                    <!-- <p-button label="Cancel" severity="secondary" class="w-full" styleClass="w-full" />
+                                    <p-button label="Save" class="w-full" styleClass="w-full" /> -->
+                                </div>
+                            </ng-template> 
+                        </p-card>
+                </ng-container>
+            </ng-container>
             
+            
+
+            <ng-template #loading>
+                <div class="col-12 my-6 py-6">
+                    <div class="spinner">
+                        <p-progressSpinner ariaLabel="loading" />
+                    </div>
+                </div>
+            </ng-template>
         </div>
     </div>
 </div>

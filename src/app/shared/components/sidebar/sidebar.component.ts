@@ -6,8 +6,6 @@ import { SidebarModule } from 'primeng/sidebar';
 	selector: 'app-sidebar',
 	templateUrl: './sidebar.component.html',
 	styleUrl: './sidebar.component.scss',
-	standalone: true,
-	imports: [SidebarModule, ButtonModule]
 })
 export class SidebarComponent {
 	sidebar: boolean = false;

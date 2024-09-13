@@ -6,6 +6,8 @@ import { ProfileAppointmentComponent, ProfileHistoryComponent, ProfileInfoCompon
 import { TabMenuModule } from 'primeng/tabmenu';
 import { ButtonModule } from 'primeng/button';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { CardModule } from 'primeng/card';
+import { PageType } from '../../../enumerations';
 
 const routes: Routes = [
   {
@@ -19,6 +21,12 @@ const routes: Routes = [
       {
         path: 'history',
         component: ProfileHistoryComponent,
+        data: {page_type: PageType.list}
+      },
+      {
+        path: 'history/:id/history',
+        component: ProfileHistoryComponent,
+        data: {page_type: PageType.detail}
       },
       {
         path: 'appointment',
@@ -51,7 +59,8 @@ const routes: Routes = [
     
     ProgressSpinnerModule,
     TabMenuModule,
-    ButtonModule
+    ButtonModule,
+    CardModule
   ]
 })
 export class ProfileModule { }

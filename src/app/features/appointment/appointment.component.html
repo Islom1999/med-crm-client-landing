@@ -1,1 +1,53 @@
-<p>appointment works!</p>
+<div class="profile">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12">
+                <div class="card appointment-card">
+                    <ng-container>
+                        <div class="grid justify-content-center">
+                            <div class="col-12 md:col-6">
+                                <form [formGroup]="$appointment" class="form-series">
+                                    <div class="p-fluid p-formgrid grid">
+                                        <div class="col-12">
+                                            <h2>Qabulga yozilish</h2>
+                                        </div>
+        
+                                        <div class="series field col-12 md:col-12">
+                                            <label for="pass">Doctor</label>
+                                            <p-inputMask  
+                                                mask="(aa) 9999999"
+                                                formControlName="series_document" 
+                                            >
+                                            </p-inputMask>
+                                        </div>
+        
+                                        <div class="series field col-12 md:col-12">
+                                            <label for="pass">Xizmat</label>
+                                            <p-inputMask  
+                                                mask="(aa) 9999999"
+                                                formControlName="series_document" 
+                                            >
+                                            </p-inputMask>
+                                        </div>
+                                        <div class="series field col-12 md:col-12">
+                                            <label for="re_pass">Qabul vaqti</label>
+                                            <input pInputText formControlName="date_of_birth" type="date">	
+                                        </div>
+                                    </div>
+                                    <div class="grid justify-content-center">
+                                        <!-- <div class="col-6 md:col-6 mb-3">
+                                            <button class="button-secondary" pButton label="Ortga" ></button>
+                                        </div> -->
+                                        <div class="col-6 md:col-6 mb-3">
+                                            <button class=" mb-3" pButton type="submit" label="Ro’yxatdan o’tish"></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

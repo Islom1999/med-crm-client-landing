@@ -43,6 +43,10 @@ const routes: Routes = [
 				path: 'profile',
 				loadChildren: () => import('../features').then(m => m.ProfileModule)
 			},
+			{
+				path: 'appointment',
+				loadChildren: () => import('../features').then(m => m.AppointmentModule)
+			},
 		]
 	}
 ];

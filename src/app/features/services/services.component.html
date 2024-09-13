@@ -16,7 +16,7 @@
 						<h2 class="ellipsis_1">{{item.name}}</h2>
 						<h4 class="ellipsis_2" [innerHTML]="item.descr"></h4>
 					</div>
-					<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
+					<button [routerLink]="['/appointment', item.id]" type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
 				</div>
 			</div>
 		</ng-container>

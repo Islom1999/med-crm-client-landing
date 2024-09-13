@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HospitalComponent } from './hospital.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CommentsSliderComponent } from './components/comments-slider/comments-slider.component';
+import { SidebarModule } from 'primeng/sidebar';
 
 const routes: Routes = [
   {
@@ -20,6 +21,8 @@ const routes: Routes = [
 		CommentsSliderComponent,
     CommonModule,
     RouterModule.forChild(routes),
+
+    SidebarModule
   ]
 })
 export class HospitalModule { }
