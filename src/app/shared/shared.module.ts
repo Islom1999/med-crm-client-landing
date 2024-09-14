@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
+import { MenuModule } from 'primeng/menu';
 
 
 
@@ -19,7 +20,8 @@ import { SidebarModule } from 'primeng/sidebar';
 		CommonModule,
 		RouterModule,
 		ButtonModule,
-		SidebarModule
+		SidebarModule,
+		MenuModule
 	],
 	exports: [
 		NavbarComponent,
@@ -27,6 +29,7 @@ import { SidebarModule } from 'primeng/sidebar';
 		SidebarComponent,
 		SidebarModule,  
 		RouterModule,
+		MenuModule
 	]
 })
 export class SharedModule { }

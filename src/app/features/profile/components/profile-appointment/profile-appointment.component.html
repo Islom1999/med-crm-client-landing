@@ -4,7 +4,7 @@
 			<ng-container *ngIf="($appointment | async) as appointment; else loading">
 				<p-table [value]="($appointment_service | async) ?? []" sortField="appointment_id" sortMode="single"
 					[scrollable]="true" scrollHeight="400px" rowGroupMode="subheader" [groupRowsBy]="'appointment.date'"
-					[tableStyle]="{'min-width': '60rem'}">
+					[tableStyle]="{'min-width': '60rem'}" styleClass="p-datatable-gridlines">
 					<ng-template pTemplate="header">
 						<tr>
 							<th>Xizmat</th>
@@ -14,6 +14,7 @@
 							<th>Navbat</th>
 						</tr>
 					</ng-template>
+
 					<ng-template pTemplate="groupheader" let-app_service>
 						<tr pRowGroupHeader>
 							<td colspan="5" class="text-center">
@@ -38,6 +39,7 @@
 							</td>
 						</tr>
 					</ng-template>
+
 					<ng-template pTemplate="body" let-app_service let-rowIndex="rowIndex">
 						<tr>
 							<td>
@@ -46,7 +48,6 @@
 							<td>
 								{{app_service?.staff?.fullname ? app_service?.staff?.fullname : '-'}}
 							</td>
-
 							<td>
 								{{app_service?.price ? app_service?.price + ' so\'m' : '-'}}
 							</td>
@@ -56,39 +57,9 @@
 							<td>
 								{{app_service?.queue_list?.number ? 'N' + app_service?.queue_list?.number : '-'}}
 							</td>
-							<td>
-								{{app_service?.date}}
-							</td>
 						</tr>
 					</ng-template>
 				</p-table>
-
-
-
-				<!-- <ng-container *ngFor="let item of appointment">
-					<p-card [header]="(item.date | date : 'dd.MM.YYYY') ?? 'Sana balgilanmagan'"
-						[subheader]="item.patient.fullname">
-						<ng-template pTemplate="header">
-						</ng-template>
-						<p *ngFor="let service of item.services">
-							xizmat: {{service.service.name}} - doktor: {{service.staff.fullname}} -
-							narx: <span>{{service.price}} so'm</span>
-							navbat: <span>{{service.queue_list.date}} - {{service.queue_list.number}}</span>
-						</p>
-						<p *ngIf="item.discount">
-							jami: {{item.price * 100/ (1 - item.discount)}} so'm * {{item.discount}} % = {{item.price}} so'm
-						</p>
-						<p *ngIf="!item.discount">
-							jami: {{item.price}} so'm
-						</p>
-						<ng-template pTemplate="footer">
-							<div class="flex gap-3 mt-1">
-								<p-button label="Cancel" severity="secondary" class="w-full" styleClass="w-full" />
-                                <p-button label="Save" class="w-full" styleClass="w-full" />
-							</div>
-						</ng-template>
-					</p-card>
-				</ng-container> -->
 			</ng-container>
 
 			<ng-template #loading>

@@ -137,16 +137,12 @@ header {
 	.header-wrap {
 		display: flex;
 		align-items: center;
-		position: relative;
+		// position: relative;
 	}
 }
 
 nav {
 	width: fit-content;
-	margin: 0 auto;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
 }
 
 .nav-link {

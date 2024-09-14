@@ -1,7 +1,9 @@
 <div class="h180"></div>
 <div class="container">
 	<div data-aos="fade-up" class="" [ngClass]="[$header.image? 'doctor-detail':'page-title-block']">
-		<img *ngIf="$header.image" [src]="getView($header.image)" alt="" class="doctor-detail__img">
+		<div class="text-center">
+			<img *ngIf="$header.image" [src]="getView($header.image)" alt="" class="doctor-detail__img">
+		</div>
 		<h1 [innerHTML]="$header.title"></h1>
 		<h3 [innerHTML]="$header.descr"></h3>
 	</div>

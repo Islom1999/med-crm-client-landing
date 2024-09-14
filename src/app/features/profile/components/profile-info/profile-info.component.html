@@ -1,7 +1,7 @@
-<div class="grid">
+<div class="grid justify-content-between py-6">
 	<!-- Left Profile Card -->
 	<ng-container *ngIf="$user_data | async as user; else loading">
-		<div class="col-12 md:col-3">
+		<div class="col-12 md:col-4">
 			<div class="card profile-card">
 				<div class="profile-avatar">
 					<img [src]="getImage(user.image)" alt="John Doe" />
@@ -9,7 +9,7 @@
 			</div>
 		</div>
 
-		<div class="col-12 md:col-9">
+		<div class="col-12 md:col-8">
 			<div class="info-card">
 				<ul class="profile-info__nav">
 					<li><strong>Ism familiya:</strong>{{user.fullname}}</li>

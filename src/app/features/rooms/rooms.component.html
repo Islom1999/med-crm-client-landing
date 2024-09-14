@@ -10,7 +10,8 @@
 				<img [src]="getView(item.image!)" alt="room image">
 				<div class="card-about">
 					<h3 class="ellipsis_1">{{item.name}}</h3>
-					<p class="ellipsis_3" [innerHTML]="item.descr"></p>
+					<p class="ellipsis_2" [innerHTML]="item.descr"></p>
+					<p class="price ellipsis_1">{{item.price_list[0].price}} so'm</p>
 				</div>
 			</div>
 		</ng-container>

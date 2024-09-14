@@ -10,7 +10,7 @@
 			<div class="xl:col-4 md:col-6 col-12 px-3" *ngFor="let item of $doctors | async">
 				<div class="def-card" data-aos="fade-up">
 					<div class="user-card">
-						<img [src]="getView(item.image)" alt="doctor img">
+						<img class="doctor-image" [src]="getView(item.image)" alt="doctor img">
 						<div class="user-card__about">
 							<h3 class="ellipsis_1">{{item.fullname}}</h3>
 							<h4 class="ellipsis_1">{{item.role.name}}</h4>
