@@ -33,8 +33,11 @@
 		<!-- List bittasi chiqadigan joyi -->
 		<ng-container *ngIf="page_type == 'detail'">
 			<div class="panel-head" *ngIf="($history_detail | async) as history; else loading">
-				<h2>{{history.name}}</h2>
-				<p [innerHTML]="history.descr" style="padding: 10px;"></p>
+				<div style="padding: 10px;">
+					<h2>{{history.name}}</h2>
+					<p [innerHTML]="history.descr">
+					</p>
+				</div>
 			</div>
 		</ng-container>
 		<ng-template #loading>

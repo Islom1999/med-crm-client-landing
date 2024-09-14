@@ -43,10 +43,10 @@
 	</ng-container>
 
 	<ng-container *ngIf="page_type == 'detail'">
-		<div>
-			<img [src]="getView($news_detail.image)" alt="news blog img">
-			<h1>{{$news_detail.title}}</h1>
-			<div [innerHTML]="$news_detail.descr"></div>
+		<div class="news-detail">
+			<img [src]="getView($news_detail.image)" alt="news blog img" class="news-detail__img">
+			<h1 class="news-detail__title">{{$news_detail.title}}</h1>
+			<p [innerHTML]="$news_detail.descr" class="news-detail__desc"></p>
 		</div>
 	</ng-container>
 </div>
