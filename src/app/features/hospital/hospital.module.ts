@@ -4,6 +4,7 @@ import { HospitalComponent } from './hospital.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CommentsSliderComponent } from './components/comments-slider/comments-slider.component';
 import { SidebarModule } from 'primeng/sidebar';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
 
-    SidebarModule
+    SidebarModule,
+    ProgressSpinnerModule
   ]
 })
 export class HospitalModule { }

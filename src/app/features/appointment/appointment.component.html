@@ -6,32 +6,50 @@
                     <ng-container>
                         <div class="grid justify-content-center">
                             <div class="col-12 md:col-6">
-                                <form [formGroup]="$appointment" class="form-series">
+                                <form [formGroup]="$appointment" (submit)="submit()" class="form-series">
                                     <div class="p-fluid p-formgrid grid">
                                         <div class="col-12">
                                             <h2>Qabulga yozilish</h2>
                                         </div>
         
-                                        <div class="series field col-12 md:col-12">
-                                            <label for="pass">Doctor</label>
-                                            <p-inputMask  
-                                                mask="(aa) 9999999"
-                                                formControlName="series_document" 
-                                            >
-                                            </p-inputMask>
+                                        <div class="field col-12 md:col-12">
+                                            <label for="pass">Vrachlar</label>
+                                            <p-dropdown 
+                                                [options]="doctors" 
+                                                formControlName="staff_id" 
+                                                [showClear]="false"
+                                                [readonly]="false"
+                                                optionLabel="fullname" 
+                                                optionValue="id"
+                                                (onChange)="getAllDoctorServices($event.value)"
+                                            ></p-dropdown>
                                         </div>
         
-                                        <div class="series field col-12 md:col-12">
-                                            <label for="pass">Xizmat</label>
-                                            <p-inputMask  
-                                                mask="(aa) 9999999"
-                                                formControlName="series_document" 
+                                        <div class="field col-12 md:col-12">
+                                            <label>Xizmatlar</label>
+                                            <p-multiSelect 
+                                                class="p-multiSelect multiselect-custom" 
+                                                formControlName="service_id" 
+                                                [options]="services"
+                                                display="chip" 
+                                                optionLabel="name"
+                                                optionValue="id"
+                                                (onChange)="calculateTotalPrice($event.value)"
                                             >
-                                            </p-inputMask>
+                                                <ng-template let-item pTemplate="item">
+                                                    <div class="flex align-items-center">
+                                                        <span class="ml-2">{{ item.name }} - {{item.price_list[0].price}} so'm</span>
+                                                    </div>
+                                                </ng-template>
+                                            </p-multiSelect>
                                         </div>
-                                        <div class="series field col-12 md:col-12">
-                                            <label for="re_pass">Qabul vaqti</label>
-                                            <input pInputText formControlName="date_of_birth" type="date">	
+                                        <div class="field col-12 md:col-12">
+                                            <label>Qabul vaqti</label>
+                                            <p-calendar formControlName="date" type="date"/>	
+                                        </div>
+
+                                        <div class="field flex justify-content-center align-items-center col-12 md:col-12">
+                                            <p>Umumiy narx: {{totalPrice * (1 - totalDiscount/100)}} so'm</p>
                                         </div>
                                     </div>
                                     <div class="grid justify-content-center">
@@ -39,7 +57,7 @@
                                             <button class="button-secondary" pButton label="Ortga" ></button>
                                         </div> -->
                                         <div class="col-6 md:col-6 mb-3">
-                                            <button class=" mb-3" pButton type="submit" label="Ro’yxatdan o’tish"></button>
+                                            <p-button [disabled]="$disableBtn" class="mb-3" pButton type="submit" label="Yozilish"></p-button>
                                         </div>
                                     </div>
                                 </form>

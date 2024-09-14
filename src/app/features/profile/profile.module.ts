@@ -11,6 +11,7 @@ import { ButtonModule } from 'primeng/button';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { CardModule } from 'primeng/card';
 import { PageType } from '../../../enumerations';
+import { TagModule } from 'primeng/tag';
 
 const routes: Routes = [
 	{
@@ -65,7 +66,8 @@ const routes: Routes = [
 		ButtonModule,
 		CardModule,
 		TableModule,
-		PanelModule
+		PanelModule,
+		TagModule
 	]
 })
 export class ProfileModule { }

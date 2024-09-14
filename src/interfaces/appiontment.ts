@@ -4,6 +4,7 @@ import { IPatient } from "./patient";
 import { IStaff } from "./staff";
 import { IServices } from "./services";
 import { IPriceList } from "./price_list";
+import { PaymentProvider, TransactionStatus } from "../enumerations";
 
 export interface IAppointment extends IBase {
     date: Date;
@@ -15,6 +16,7 @@ export interface IAppointment extends IBase {
     patient: IPatient
 
     services: IAppointService[]
+    transactions: ITransactions[]
 }   
 
 
@@ -43,4 +45,18 @@ export interface PaymentDto {
     name: string;
     date: Date;
     appointment_id: string;
+}
+
+export interface ITransactions extends IBase {
+    provider: PaymentProvider
+    trans_id: string
+    price: number
+    prepare_id: any
+    perform_time: any
+    cancel_time: any
+    reason: any
+    state: number
+    status: TransactionStatus
+    user_id: string
+    appointment_id: string
 }

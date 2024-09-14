@@ -37,6 +37,30 @@
 	<span class="title-element"></span>
 	<h1>Bizning Shifokorlarimiz</h1>
 </div>
+<div class="container">
+	<div class="doctor-cards grid row-gap-4">
+		<ng-container *ngIf="($doctors | async)?.length">
+			<div class="xl:col-4 md:col-6 col-12 px-3" *ngFor="let item of $doctors | async">
+				<div class="card" data-aos="fade-up">
+					<div class="user-card">
+						<img [src]="getView(item.image)" alt="doctor img">
+						<div class="user-card__about">
+							<h3 class="ellipsis_1">{{item.fullname}}</h3>
+							<h4 class="ellipsis_1">{{item.role.name}}</h4>
+						</div>
+					</div>
+					<a [routerLink]="['/service','doctor',item.id]" class="user-card-btn">Konsultatsiyaga yozilish</a>
+				</div>
+			</div>
+		</ng-container>
+		<ng-container *ngIf="!($doctors | async)">
+			<div class="spinner">
+				<p-progressSpinner ariaLabel="loading" />
+			</div>
+		</ng-container>
+	</div>
+</div>
+
 <div class="more-link" routerLink="/doctors">
 	<h3>Barchasini ko’rish</h3>
 	<img src="assets/images/arrow-right.svg" alt="arrow link icon">
