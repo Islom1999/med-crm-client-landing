@@ -1,36 +1,34 @@
 <div class="grid">
-    <!-- Left Profile Card -->
-    <ng-container *ngIf="$user_data | async as user; else loading">
-        <div class="col-12 md:col-4">
-            <div class="card profile-card">
-                <div class="profile-avatar">
-                    <img [src]="getImage(user.image)" alt="John Doe" />
-                </div>
-                <h2>{{user.fullname}}</h2>
-                <p>{{user.email}}</p>
-                <p>+998 ({{user.phone.toString().slice(0,2)}}) {{user.phone.toString().slice(2)}}</p>
-            </div>
-        </div>
-    
-        <div class="col-12 md:col-8">
-            <div class="card info-card">
-                <ul>
-                    <li><strong>Ism familiya: </strong>{{user.fullname}}</li>
-                    <li *ngIf="user.email"><strong>Email: </strong>{{user.email}}</li>
-                    <li><strong>Manzil: </strong>{{user.address}}</li>
-                    <li><strong>Tug'ulgan sana: </strong>{{user.date_of_birth | date : 'dd.MM.yyyy'}}</li>
-                    <li><strong>Raqam: </strong>+998 ({{user.phone.toString().slice(0,2)}}) {{user.phone.toString().slice(2)}}</li>
-                </ul>
-            </div>
-        </div>
-    </ng-container>
-    
-    <ng-template #loading>
-        <div class="col-12 my-6 py-6">
-            <div class="spinner">
-                <p-progressSpinner ariaLabel="loading" />
-            </div>
-        </div>
-    </ng-template>
-    
+	<!-- Left Profile Card -->
+	<ng-container *ngIf="$user_data | async as user; else loading">
+		<div class="col-12 md:col-3">
+			<div class="card profile-card">
+				<div class="profile-avatar">
+					<img [src]="getImage(user.image)" alt="John Doe" />
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12 md:col-9">
+			<div class="info-card">
+				<ul class="profile-info__nav">
+					<li><strong>Ism familiya:</strong>{{user.fullname}}</li>
+					<li *ngIf="user.email"><strong>Email: </strong>{{user.email}}</li>
+					<li><strong>Manzil: </strong>{{user.address}}</li>
+					<li><strong>Tug'ulgan sana: </strong>{{user.date_of_birth | date : 'dd.MM.yyyy'}}</li>
+					<li><strong>Raqam: </strong>+998 ({{user.phone.toString().slice(0,2)}}) {{user.phone.toString().slice(2)}}
+					</li>
+				</ul>
+			</div>
+		</div>
+	</ng-container>
+
+	<ng-template #loading>
+		<div class="col-12 my-6 py-6">
+			<div class="spinner">
+				<p-progressSpinner ariaLabel="loading" />
+			</div>
+		</div>
+	</ng-template>
+
 </div>

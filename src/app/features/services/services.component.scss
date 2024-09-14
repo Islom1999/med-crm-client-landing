@@ -3,11 +3,41 @@
 		width: 100%;
 	}
 }
-.card-icon{
-	img{
+
+.card-icon {
+	img {
 		width: 100px;
 		height: 100px;
 		object-fit: cover;
 		border-radius: 50%;
+	}
+}
+
+.doctor-detail__img {
+	width: 100%;
+	max-width: 700px;
+	float: left;
+	margin-right: 15px;
+}
+
+.service-cards {
+	width: 100%;
+	padding-top: 100px;
+}
+
+.doctor-detail {
+	margin-top: 50px;
+
+	h1 {
+		font-size: 25px;
+		line-height: 130%;
+		color: var(--blue-700);
+	}
+
+	h3 {
+		font-size: 20px;
+		color: #9D9D9D;
+		font-weight: 400;
+		line-height: 130%;
 	}
 }

@@ -2,72 +2,68 @@
 	<div class="col-12 md:col-12">
 		<div class="card appointment-card">
 			<ng-container *ngIf="($appointment | async) as appointment; else loading">
-				<p-table 
-					[value]="($appointment_service | async) ?? []"
-					sortField="appointment_id" 
-					sortMode="single" 
-					[scrollable]="true" 
-					scrollHeight="400px" 
-					rowGroupMode="subheader" 
-					[groupRowsBy]="'appointment.date'" 
+				<p-table [value]="($appointment_service | async) ?? []" sortField="appointment_id" sortMode="single"
+					[scrollable]="true" scrollHeight="400px" rowGroupMode="subheader" [groupRowsBy]="'appointment.date'"
 					[tableStyle]="{'min-width': '60rem'}">
-						<ng-template pTemplate="header">
-							<tr>
-								<th>Xizmat</th>
-								<th>Doktor</th>
-								<th>Narx</th>
-								<th>Date</th>
-								<th>Navbat</th>
-							</tr>
-						</ng-template>
-						<ng-template pTemplate="groupheader" let-app_service>
-							<tr pRowGroupHeader>
-								<td colspan="5" class="text-center">
-									<span class="font-bold ml-2">Qabul rajalashtirilgan sana:  {{app_service?.appointment?.date | date : 'dd.MM.yyyy'}}</span>
-								</td>
-							</tr>
-						</ng-template>
-						<ng-template pTemplate="groupfooter" let-app_service>
-							<tr>
-								<td colspan="5" class="text-right pr-6">
-									<div *ngIf="paymentPrice(app_service?.appointment?.transactions) as pay; else payment_else">
-										<p>Jami narx: {{app_service?.appointment?.price}} so'm</p>
-										<p *ngIf="pay != 0">To'langan: {{ pay }} so'm</p>
-										<p *ngIf="(app_service?.appointment?.price - pay) != 0">Qarz: {{ app_service?.appointment?.price - pay }} so'm</p>
-									</div>
-									<ng-template #payment_else >
-										<p>Jami narx: {{app_service?.appointment?.price}} so'm</p>
-										<p class="tag">Qarz: {{app_service?.appointment?.price}} so'm</p>
-									</ng-template>
-								</td>
-							</tr>
-						</ng-template>
-						<ng-template pTemplate="body" let-app_service let-rowIndex="rowIndex">
-							<tr>
-								<td>
-									{{app_service?.service?.name}}
-								</td>
-								<td>
-									{{app_service?.staff?.fullname ? app_service?.staff?.fullname : '-'}}
-								</td>
-								
-								<td>
-									{{app_service?.price ? app_service?.price + ' so\'m' : '-'}}
-								</td>
-								<td>
-									{{app_service?.queue_list?.date ? (app_service?.queue_list?.date | date : 'dd.MM.YYYY') : '-'}}
-								</td>
-								<td>
-									{{app_service?.queue_list?.number ? 'N' + app_service?.queue_list?.number : '-'}}
-								</td>
-								<td>
-									{{app_service?.date}}
-								</td>
-							</tr>
-						</ng-template>
+					<ng-template pTemplate="header">
+						<tr>
+							<th>Xizmat</th>
+							<th>Doktor</th>
+							<th>Narx</th>
+							<th>Date</th>
+							<th>Navbat</th>
+						</tr>
+					</ng-template>
+					<ng-template pTemplate="groupheader" let-app_service>
+						<tr pRowGroupHeader>
+							<td colspan="5" class="text-center">
+								<span class="font-bold ml-2">Qabul rajalashtirilgan sana: {{app_service?.appointment?.date | date :
+									'dd.MM.yyyy'}}</span>
+							</td>
+						</tr>
+					</ng-template>
+					<ng-template pTemplate="groupfooter" let-app_service>
+						<tr>
+							<td colspan="5" class="text-right pr-6">
+								<div *ngIf="paymentPrice(app_service?.appointment?.transactions) as pay; else payment_else">
+									<p>Jami narx: {{app_service?.appointment?.price}} so'm</p>
+									<p *ngIf="pay != 0">To'langan: {{ pay }} so'm</p>
+									<p *ngIf="(app_service?.appointment?.price - pay) != 0">Qarz: {{ app_service?.appointment?.price - pay
+										}} so'm</p>
+								</div>
+								<ng-template #payment_else>
+									<p>Jami narx: {{app_service?.appointment?.price}} so'm</p>
+									<p class="tag">Qarz: {{app_service?.appointment?.price}} so'm</p>
+								</ng-template>
+							</td>
+						</tr>
+					</ng-template>
+					<ng-template pTemplate="body" let-app_service let-rowIndex="rowIndex">
+						<tr>
+							<td>
+								{{app_service?.service?.name}}
+							</td>
+							<td>
+								{{app_service?.staff?.fullname ? app_service?.staff?.fullname : '-'}}
+							</td>
+
+							<td>
+								{{app_service?.price ? app_service?.price + ' so\'m' : '-'}}
+							</td>
+							<td>
+								{{app_service?.queue_list?.date ? (app_service?.queue_list?.date | date : 'dd.MM.YYYY') : '-'}}
+							</td>
+							<td>
+								{{app_service?.queue_list?.number ? 'N' + app_service?.queue_list?.number : '-'}}
+							</td>
+							<td>
+								{{app_service?.date}}
+							</td>
+						</tr>
+					</ng-template>
 				</p-table>
 
-				
+
 
 				<!-- <ng-container *ngFor="let item of appointment">
 					<p-card [header]="(item.date | date : 'dd.MM.YYYY') ?? 'Sana balgilanmagan'"
@@ -94,7 +90,7 @@
 					</p-card>
 				</ng-container> -->
 			</ng-container>
-			
+
 			<ng-template #loading>
 				<div class="col-12 my-6 py-6">
 					<div class="spinner">
