@@ -2,22 +2,23 @@
 	<div class="col-12 md:col-12">
 		<div class="card appointment-card">
 			<ng-container *ngIf="($appointment | async) as appointment; else loading">
-				<p-table [value]="appointment" [paginator]="true" [rows]="5" [tableStyle]="{ 'min-width': '50rem' }"
-					[rowsPerPageOptions]="[5, 10, 20]">
-					<ng-template pTemplate="header">
-						<tr>
-							<th style="width:25%; padding: 10px; font-size: 20px;">Xizmat</th>
-							<th style="width:25%; padding: 10px; font-size: 20px;">Doktor</th>
-							<th style="width:25%; padding: 10px; font-size: 20px;">Narxi</th>
-							<th style="width:25%; padding: 10px; font-size: 20px;">Navbat</th>
-						</tr>
-					</ng-template>
-					<ng-template pTemplate="body" let-customer *ngIf="($appointment | async) as appointment; else loading">
-						<tr>
-							
-						</tr>
-					</ng-template>
-				</p-table>
+				<ng-container *ngFor="let services of appointment">
+					<p-table [tableStyle]="{ 'min-width': '50rem' }">
+						<ng-template pTemplate="header">
+							<tr>
+								<th>Code</th>
+								<th>Name</th>
+								<th>Category</th>
+								<th>Quantity</th>
+							</tr>
+						</ng-template>
+						<ng-template pTemplate="body" let-product>
+							<tr>
+								<td></td>
+							</tr>
+						</ng-template>
+					</p-table>
+				</ng-container>
 				<ng-container *ngFor="let item of appointment">
 					<p-card [header]="(item.date | date : 'dd.MM.YYYY') ?? 'Sana balgilanmagan'"
 						[subheader]="item.patient.fullname">
