@@ -20,4 +20,10 @@ export interface IStaff extends IBase{
     role_id:         string;
 
     role: IRole
+    department: IDepartament
 } 
+
+export interface IDepartament extends IBase{
+    name: string;
+    descr?: string;
+}   

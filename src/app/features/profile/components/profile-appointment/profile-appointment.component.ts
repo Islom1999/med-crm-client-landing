@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AppointmentService } from '../../../../shared/services';
 import { IAppointment, IAppointService, ITransactions } from '../../../../../interfaces';
 import { Observable } from 'rxjs';
 import { TransactionStatus } from '../../../../../enumerations';
+import html2pdf from 'html2pdf.js';
 
 @Component({
 	selector: 'app-profile-appointment',
@@ -28,6 +29,23 @@ export class ProfileAppointmentComponent implements OnInit {
 			}
 			return pay;
 		}, 0);
+	}
+
+	downloadPDF(id: string): void {
+		const element = document.getElementById(id); // PDF ga aylantiriladigan guruh elementini olamiz
+		if (element) {
+			const options = {
+				margin: 1,
+				filename: 'exported-content.pdf',
+				image: { type: 'jpeg', quality: 0.98 },
+				html2canvas: { scale: 2, useCORS: true },  // CORS qo'llab-quvvatlash
+				jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+			};
+			
+			html2pdf().from(element).set(options).save();  // Elementdan PDF yaratamiz
+		} else {
+			console.error('Element topilmadi');
+		}
 	}
 	
 }

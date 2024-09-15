@@ -6,7 +6,7 @@
                     <ng-container>
                         <div class="grid justify-content-center">
                             <div class="col-12 md:col-6">
-                                <form [formGroup]="$appointment" (submit)="submit()" class="form-series">
+                                <form [formGroup]="$appointment" (submit)="submit()">
                                     <div class="p-fluid p-formgrid grid">
                                         <div class="col-12">
                                             <h2>Qabulga yozilish</h2>
@@ -45,7 +45,7 @@
                                         </div>
                                         <div class="field col-12 md:col-12">
                                             <label>Qabul vaqti</label>
-                                            <p-calendar formControlName="date" type="date"/>	
+                                            <p-calendar dateFormat="dd.mm.yy" formControlName="date" type="date"/>	
                                         </div>
 
                                         <div class="field flex justify-content-center align-items-center col-12 md:col-12">
@@ -53,11 +53,8 @@
                                         </div>
                                     </div>
                                     <div class="grid justify-content-center">
-                                        <!-- <div class="col-6 md:col-6 mb-3">
-                                            <button class="button-secondary" pButton label="Ortga" ></button>
-                                        </div> -->
                                         <div class="col-6 md:col-6 mb-3">
-                                            <p-button [disabled]="$disableBtn" class="mb-3" pButton type="submit" label="Yozilish"></p-button>
+                                            <p-button [disabled]="$disableBtn" type="submit" class="mb-3" pButton label="Yozilish"></p-button>
                                         </div>
                                     </div>
                                 </form>

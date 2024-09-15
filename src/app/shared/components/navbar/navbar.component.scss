@@ -31,7 +31,7 @@ header {
 	border-radius: 50%;
 	/* Yuvarlak tugma */
 	padding: 10px;
-	margin-right: 25px;
+	// margin-right: 25px;
 	cursor: pointer;
 	transition: background-color 0.3s;
 	box-sizing: border-box;
@@ -47,6 +47,16 @@ header {
 	transform: scale(1.05);
 }
 
+.close-btn{
+	background: linear-gradient(90deg, #b2c8dd 0%, #fb0054 100%);
+}
+.close-btn:hover{
+	background: linear-gradient(90deg, #fb0054 0%, #b2c8dd 100%);
+}
+.close-btn:active {
+	background: linear-gradient(90deg, #fb0054 0%, #b2c8dd 100%);
+	transform: scale(1.05);
+}
 
 .profile-icon {
 	font-size: 30px;

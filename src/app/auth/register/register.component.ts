@@ -178,7 +178,7 @@ export class RegisterComponent implements OnInit {
 
   phoneVerify(data: LoginPhoneVerify) {
     this._authService.phoneVerify(data).subscribe(data => {
-      this.router.navigate(['/'])
+      this.router.navigate(['/profile']);
     })
   }
 

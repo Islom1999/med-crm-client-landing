@@ -16,5 +16,8 @@ export class NavbarComponent {
 	isRegister() {
 		return this.authService.isAuthenticated()
 	}
+	logout() {
+		return this.authService.logout()
+	}
 	sidebar: boolean = false;
 }

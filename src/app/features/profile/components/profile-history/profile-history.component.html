@@ -7,7 +7,7 @@
 				<ng-template pTemplate="header">
 					<tr class="table-head">
 						<th>Doktor</th>
-						<th>Tashxis egasi</th>
+						<th>Tashxis yozdi</th>
 						<th>Tashxis sanasi</th>
 						<th>Xizmat</th>
 						<th>Tashxis tasnifi</th>
@@ -23,7 +23,18 @@
 						<td>{{ item.name}}</td>
 						<td>
 							<p-button [routerLink]="['/profile', 'history', item.id, 'history']" icon="pi pi-eye" iconPos="right"
-								iconPos="right" label="O'qish"></p-button>
+								iconPos="left" label="O'qish"></p-button>
+						</td>
+					</tr>
+				</ng-template>
+
+				<ng-template pTemplate="footer">
+					<tr *ngIf="!history.length">
+						<td colspan="6" class="text-center">
+							<div class="py-6 my-6">
+								<span class="pi pi-inbox" style="font-size: 4rem;"></span>
+								<h3>Malumotlar yo'q</h3>
+							</div>
 						</td>
 					</tr>
 				</ng-template>
@@ -33,10 +44,26 @@
 		<!-- List bittasi chiqadigan joyi -->
 		<ng-container *ngIf="page_type == 'detail'">
 			<div class="panel-head" *ngIf="($history_detail | async) as history; else loading">
-				<div>
-					<h2>{{history.name}}</h2>
-					<p [innerHTML]="history.descr">
-					</p>
+				<div class="card">
+					<div class="text-right">
+						<button pButton icon="pi pi-print" (click)="downloadPDF()" label="Yuklab olish"></button>
+					</div>
+					<div #contentToConvert>
+						<h2 class="text-center">{{history.name}}</h2>
+						<div class="grid">
+							<div class="col-6">
+								<p class="text-left ">Bemor: <b>{{history?.patient?.fullname}}</b></p>
+								<p class="text-left ">Tug'ulgan yili: <b>{{history?.patient?.date_of_birth | date : 'dd.MM.YYYY'}}</b></p>
+								<p class="text-left ">Manzili: <b>{{history?.patient?.address}}</b></p>
+							</div>
+							<div class="col-6 text-right">
+								<p class="text-right ">Doktor: <b>{{history?.staff?.fullname}}</b></p>
+								<p class="text-right ">Xizmat: <b>{{history?.appointment?.service?.name ? history.appointment.service.name : 'xizmat biriktirilmagan'}}</b></p>
+								<p class="text-right ">Sana: <b>{{history?.date ? (history.date | date : 'dd.MM.YYYY') : 'sana biriktirilmagan'}}</b></p>
+							</div>
+						</div>
+						<p [innerHTML]="history.descr"></p>
+					</div>
 				</div>
 			</div>
 		</ng-container>
