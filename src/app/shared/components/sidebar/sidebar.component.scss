@@ -52,6 +52,22 @@ p-sidebar {
 	width: 100%;
 }
 
-// .sidebar-right {
+.sidebar-right {
+	display: flex;
+	align-items: center;
+	column-gap: 15px;
+}
 
-// }
+// ProfileBtn
+.profile-btn {
+	display: flex;
+	align-items: center;
+	background: linear-gradient(90deg, #0082FB 0%, #004D95 100%);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	padding: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	box-sizing: border-box;
+}
