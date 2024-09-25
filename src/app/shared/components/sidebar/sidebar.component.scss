@@ -1,6 +1,10 @@
 .sidebar-logo {
 	margin-right: auto;
 }
+.menu-container{
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
 
 .menu {
 	list-style: none;
@@ -56,6 +60,15 @@ p-sidebar {
 	display: flex;
 	align-items: center;
 	column-gap: 15px;
+}
+.mobile-nav__logo {
+	display: block;
+	text-align: center;
+	font-size: 16px;
+
+	span {
+		display: block;
+	}
 }
 
 // ProfileBtn
