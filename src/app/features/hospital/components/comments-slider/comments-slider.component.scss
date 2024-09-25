@@ -18,6 +18,8 @@
 
 .comment-user__title {
 	ul {
+		padding: 0;
+		margin: 0;
 		margin-bottom: 20px;
 		display: flex;
 		align-items: center;
@@ -91,4 +93,109 @@ swiper-slide {
 	font-weight: 400;
 	letter-spacing: 0.52px;
 	text-transform: capitalize;
+}
+
+@media (max-width: 1620px) {
+	.comment img.comment-card__bg {
+		width: 209px;
+		height: 174px;
+	}
+}
+
+@media (max-width: 768px) {
+	.comment-user {
+		margin-bottom: 20px;
+	}
+
+	.comment-user__title {
+		h2 {
+			font-size: 25px;
+			line-height: 100%;
+		}
+
+		ul {
+			margin-bottom: 10px;
+
+			li {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+
+	.comment-txt {
+		font-size: 16px;
+	}
+
+	.comment-line {
+		margin-top: 15px;
+		height: 5px;
+	}
+}
+
+@media (max-width: 575px) {
+	.comment {
+		padding: 30px;
+
+		img.comment-card__bg {
+			width: 179px;
+			height: 104px;
+		}
+	}
+
+	.comment-line {
+		width: 150px;
+	}
+}
+
+@media (max-width: 500px) {
+	.comment-user__card {
+		border-width: 3px;
+		border-radius: 66px 0px 0px 0px;
+		width: 130px;
+		height: 130px;
+
+		span.quote {
+			width: 35px;
+			height: 35px;
+			padding: 5px;
+		}
+	}
+
+	.comment-user {
+		column-gap: 15px;
+	}
+
+	.comment-line {
+		width: 100px;
+	}
+}
+
+@media (max-width:450px) {
+	.comment {
+		img.comment-card__bg {
+			width: 119px;
+			height: 74px;
+		}
+	}
+
+	.comment-user__title {
+		h2 {
+			font-size: 18px;
+		}
+	}
+
+	.comment-user__card {
+		width: 90px;
+		height: 90px;
+		border-radius: 46px 0 0 0;
+
+		span.quote {
+			width: 25px;
+			height: 25px;
+			padding: 3px;
+			top: -15px;
+			right: -15px;
+		}
+	}
 }

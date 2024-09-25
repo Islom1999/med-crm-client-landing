@@ -12,18 +12,19 @@ import { RouterModule } from '@angular/router';
 })
 export class CommentsSliderComponent {
 	@Input()
-	$client_comments!:{image:string, star:number, name:string, comment:string}[]
+	$client_comments!: { image: string, star: number, name: string, comment: string }[]
 
-	arrayMake(count:number){
+	arrayMake(count: number) {
 		return Array(count).fill(0)
 	}
 
 	breakpointsConfig = {
-		768: {  // 768px va undan katta ekranlar uchun
-		  slidesPerView: 2,
+		0: {  // 768px va undan katta ekranlar uchun
+			slidesPerView: 1,
 		},
-		1400: { // 1024px va undan katta ekranlar uchun (katta ekranda kerak bo'lsa, o'zgartiring)
-		  slidesPerView: 2,
+		1400: {
+			slidesPerView: 2,
+			spaceBetween: 10
 		},
-	  };
+	};
 }

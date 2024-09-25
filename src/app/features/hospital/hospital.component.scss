@@ -541,10 +541,12 @@
 		}
 	}
 }
+
 @media (max-width: 400px) {
 	.service-cards .def-card {
 		padding: 40px 20px;
 	}
+
 	.service-cards .def-card button {
 		width: 100%;
 		font-size: 16px;
@@ -553,7 +555,9 @@
 	.doctor-cards .def-card {
 		padding: 0 20px 30px 20px;
 	}
-	.user-card .user-card__about h3, .user-card .user-card__about h4 {
+
+	.user-card .user-card__about h3,
+	.user-card .user-card__about h4 {
 		font-size: 16px;
 	}
 }
@@ -562,5 +566,5 @@
 	.home-bottom .container {
 		max-width: 100%;
 	}
-	
+
 }
