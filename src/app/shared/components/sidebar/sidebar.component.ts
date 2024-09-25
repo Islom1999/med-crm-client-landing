@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { ButtonModule } from 'primeng/button';
-import { SidebarModule } from 'primeng/sidebar';
+import { AuthService } from '../../../auth/auth.service';
 
 @Component({
 	selector: 'app-sidebar',
@@ -10,7 +9,9 @@ import { SidebarModule } from 'primeng/sidebar';
 })
 export class SidebarComponent {
 	sidebar: boolean = false;
+	constructor(private authService: AuthService) {
 
+	}
 	items: MenuItem[] = [
 		{ label: 'Bosh Sahifa', icon: 'pi pi-home', routerLink: '/' },
 		{ label: 'Biz Haqimizda', icon: 'pi pi-info-circle', routerLink: '/about' },
@@ -21,8 +22,10 @@ export class SidebarComponent {
 		{ label: 'Bog’lanish', icon: 'pi pi-phone', routerLink: '/contact' }
 	];
 
-	close(){
+	close() {
 		this.sidebar = false
 	}
-	
+	isRegister() {
+		return this.authService.isAuthenticated()
+	}
 }

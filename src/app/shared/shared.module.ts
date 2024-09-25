@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -21,13 +23,15 @@ import { MenuModule } from 'primeng/menu';
 		RouterModule,
 		ButtonModule,
 		SidebarModule,
-		MenuModule
+		MenuModule,
+		AvatarGroupModule,
+		AvatarModule
 	],
 	exports: [
 		NavbarComponent,
 		FooterComponent,
 		SidebarComponent,
-		SidebarModule,  
+		SidebarModule,
 		RouterModule,
 		MenuModule
 	]
