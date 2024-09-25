@@ -13,5 +13,15 @@ import { RouterModule } from '@angular/router';
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AboutSlider {
-	
+	centeredSlides = true;
+	fade = true;
+	loop = true;
+
+	breakpointsConfig = {
+		0: {
+			slidesPerView: 1,
+
+		},
+		992: { slidesPerView: 2.1, spaceBetween: 5 },
+	};
 }

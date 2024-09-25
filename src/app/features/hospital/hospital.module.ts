@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AccordionModule } from 'primeng/accordion';
 import { CommonModule } from '@angular/common';
 import { HospitalComponent } from './hospital.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -7,24 +8,25 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HospitalComponent
-  }
+	{
+		path: '',
+		component: HospitalComponent
+	}
 ];
 
 
 @NgModule({
-  declarations: [
-    HospitalComponent,
-  ],
-  imports: [
+	declarations: [
+		HospitalComponent,
+	],
+	imports: [
 		CommentsSliderComponent,
-    CommonModule,
-    RouterModule.forChild(routes),
+		CommonModule,
+		RouterModule.forChild(routes),
 
-    SidebarModule,
-    ProgressSpinnerModule
-  ]
+		SidebarModule,
+		ProgressSpinnerModule,
+		AccordionModule
+	]
 })
 export class HospitalModule { }

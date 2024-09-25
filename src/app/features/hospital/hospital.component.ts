@@ -56,14 +56,6 @@ export class HospitalComponent {
 		this.$news = this._newsService.getAll()
 	}
 
-	accordionToggle(index: number) {
-		if (this.openIndex === index) {
-			this.openIndex = null;
-		} else {
-			this.openIndex = index;
-		}
-	}
-
 	getView(image: string) {
 		return this._filesService.getView(image)
 	}

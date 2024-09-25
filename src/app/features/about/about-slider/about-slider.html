@@ -1,5 +1,6 @@
-<swiper-container [slidesPerView]="3" [spaceBetween]="10" [centeredSlides]="true" fade="true" [loop]="true"
-	[slidesPerView]="2.1">
+<swiper-container [centeredSlides]="centeredSlides" [fade]="fade" [loop]="loop"
+	[breakpoints]="breakpointsConfig">
+
 	<swiper-slide>
 		<div class="about-slider__item">
 			<img src="assets/images/about-slider2.png" alt="">
@@ -20,4 +21,5 @@
 			<img src="assets/images/about-slider3.png" alt="">
 		</div>
 	</swiper-slide>
+
 </swiper-container>

@@ -223,9 +223,11 @@
 		box-shadow: 4px 4px 29.1px 0px rgba(57, 57, 57, 0.10);
 
 		h1.card-title {
+			margin: 0;
 			font-size: 26px;
 			font-weight: 600;
 			letter-spacing: 0.78px;
+			line-height: 120%;
 			display: -webkit-box;
 			max-width: 400px;
 			-webkit-line-clamp: 2;
@@ -263,58 +265,11 @@
 }
 
 // FAQ start ===================
-.faq-accordions {
-	overflow: hidden;
-	border-radius: 20px;
-	border: 1px solid #EEE;
-	background: #F4F4F4;
-	box-shadow: 2px 2px 24.5px 0px rgba(0, 0, 0, 0.08);
-	padding: 40px 60px;
-}
-
-.accordion {
-	padding: 25px 0;
-
-	&:not(:last-child) {
-		border-bottom: 1px solid #9D9D9D;
-	}
-
-	.accordion-header {
-		display: flex;
-		align-items: center;
-
-		column-gap: 20px;
-
-		h3 {
-			color: #444;
-			font-size: 24px;
-			font-weight: 500;
-			line-height: 150%;
-		}
-
-		img {
-			margin-left: auto;
-			width: 51px;
-			height: 51px;
-			flex-shrink: 0;
-		}
-	}
-
-	.accordion-body {
-		height: 0;
-		overflow: hidden;
-
-		p {
-			padding: 10px;
-			color: #9D9D9D;
-			font-size: 20px;
-			font-weight: 500;
-		}
-	}
-
-	.accordion-body.active {
-		height: auto;
-	}
+// .p-accordionTab {
+// 	background-color: #F4F4F4;
+// }
+.p-accordion .p-accordion-header .p-accordion-header-link {
+	background-color: red;
 }
 
 // FAQ start ===================
@@ -412,6 +367,28 @@
 		}
 	}
 
+	.card.news__card .card-about h1.card-title {
+		font-size: 18px;
+	}
+
+	.card.news__card .card-about__head .item span {
+		font-size: 16px;
+	}
+
+	.more-link span:first-child {
+		font-size: 14px;
+	}
+
+	.more-link span:last-child {
+		word-wrap: 15px;
+		height: 15px;
+
+		img {
+			aspect-ratio: 0;
+			height: 100%;
+		}
+	}
+
 	.service-cards .def-card .card-about h2 {
 		font-size: 20px;
 	}
@@ -490,6 +467,11 @@
 }
 
 @media (max-width:575px) {
+	.card.news__card .card-about__head .item {
+		flex-direction: row;
+		margin: 0;
+	}
+
 	.item {
 		flex-direction: column;
 		row-gap: 10px;
@@ -526,6 +508,14 @@
 }
 
 @media (max-width: 450px) {
+	.card.news__card .card-about {
+		max-width: 100%;
+		padding: 10px;
+	}
+
+	.card.news__card .card-about__head .item span {
+		font-size: 14px;
+	}
 	#home {
 		background-size: cover;
 		background-position: center, -470px;

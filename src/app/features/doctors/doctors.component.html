@@ -12,8 +12,8 @@
 					<div class="user-card">
 						<img class="doctor-image" [src]="getView(item.image)" alt="doctor img">
 						<div class="user-card__about">
-							<h3 class="ellipsis_1">{{item.fullname}}</h3>
-							<h4 class="ellipsis_2">{{item?.department?.name}}: {{item?.role?.name}}</h4>
+							<h3 class="ellipsis_1 m-0">{{item.fullname}}</h3>
+							<h4 class="ellipsis_2 m-0">{{item?.department?.name}}: {{item?.role?.name}}</h4>
 						</div>
 					</div>
 					<a [routerLink]="['/service','doctor',item.id]" class="user-card-btn">Konsultatsiyaga yozilish</a>
