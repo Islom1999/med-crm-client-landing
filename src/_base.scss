@@ -10,6 +10,7 @@ Page title block styles
 	max-width: 1307px;
 	margin: 100px auto 60px auto;
 	text-align: center;
+	padding: 0 15px;
 
 	h1,
 	h2 {
@@ -53,10 +54,6 @@ Public button styles
 	margin-left: auto;
 }
 
-.doctor-image{
-	max-height: 400px;
-}
-
 @media (min-width: 768px) {
 	.container {
 		width: 100%;
@@ -93,7 +90,7 @@ Public button styles
 		}
 
 		h3 {
-			font-size: 20px;
+			font-size: 18px;
 			line-height: 130%;
 		}
 	}

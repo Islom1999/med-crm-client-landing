@@ -319,6 +319,11 @@
 
 // FAQ start ===================
 
+#doctors {
+	.main-title {
+		margin-bottom: 60px;
+	}
+}
 
 @media (max-width:1439px) {
 	.home-bottom {
@@ -349,6 +354,33 @@
 }
 
 
+@media (max-width:1200px) {
+	#home {
+		margin: 0;
+
+		.home-wrap {
+			padding: 200px 0;
+			padding-bottom: 250px;
+
+			.home-img {
+				max-width: 700px;
+				right: -80px;
+			}
+		}
+	}
+
+	.home-about {
+		h1 {
+			line-height: 130%;
+			font-size: 40px;
+		}
+
+		a {
+			font-size: 20px;
+		}
+	}
+}
+
 @media (max-width:1199px) {
 	.item {
 		column-gap: 20px;
@@ -372,10 +404,34 @@
 }
 
 @media (max-width:991px) {
+
 	.home-bottom {
 		.container {
 			max-width: 100%;
 			padding: 0;
+		}
+	}
+
+	.service-cards .def-card .card-about h2 {
+		font-size: 20px;
+	}
+
+	.card-about {
+		h3 {
+			font-size: 16px;
+			color: #3F3E3E;
+		}
+
+		h4 {
+			font-size: 16px;
+			-webkit-line-clamp: 4;
+		}
+	}
+
+	#home {
+		.home-wrap {
+			padding-top: 150px;
+			padding-bottom: 300px;
 		}
 	}
 }
@@ -394,9 +450,22 @@
 		transform: translate(0);
 		padding: 0;
 		padding-top: 50px;
+		margin-bottom: 100px;
 
 		.home-bottom__wrap {
 			padding: 0;
+		}
+	}
+
+	#home {
+		.home-wrap {
+			padding: 200px 0;
+		}
+	}
+
+	.home-about {
+		a {
+			margin-top: 20px;
 		}
 	}
 }
@@ -425,6 +494,7 @@
 		flex-direction: column;
 		row-gap: 10px;
 		margin-bottom: 20px;
+
 		.item-icon {
 			width: 140px;
 			height: 140px;
@@ -442,10 +512,55 @@
 			}
 		}
 	}
+
+	.home-about {
+		h1 {
+			font-size: 30px;
+		}
+
+		a {
+			font-size: 16px;
+			padding: 5px 15px;
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	#home {
+		background-size: cover;
+		background-position: center, -470px;
+
+		.home-wrap {
+			padding: 150px 0;
+		}
+	}
+
+	.home-about {
+		h1 {
+			font-size: 25px;
+		}
+	}
+}
+@media (max-width: 400px) {
+	.service-cards .def-card {
+		padding: 40px 20px;
+	}
+	.service-cards .def-card button {
+		width: 100%;
+		font-size: 16px;
+	}
+
+	.doctor-cards .def-card {
+		padding: 0 20px 30px 20px;
+	}
+	.user-card .user-card__about h3, .user-card .user-card__about h4 {
+		font-size: 16px;
+	}
 }
 
 @media screen and (min-width: 1199px) and (max-width: 1700px) {
 	.home-bottom .container {
 		max-width: 100%;
 	}
+	
 }

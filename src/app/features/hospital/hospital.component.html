@@ -14,7 +14,8 @@
 	</div>
 </div>
 <div class="home-bottom">
-	<div data-aos="fade-up" class="container" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
+	<div data-aos="fade-up" class="container" data-aos-anchor="#example-anchor" data-aos-offset="500"
+		data-aos-duration="500">
 		<div class="home-bottom__wrap grid">
 			<ng-container *ngFor="let item of $header_bottom">
 				<div class="col-12 sm:col-6 md:col-6 xl:col-3">
@@ -32,10 +33,10 @@
 		</div>
 	</div>
 </div>
-<div class="p100">
+<div id="doctors">
 	<div class="main-title">
 		<span class="title-element"></span>
-		<h1>Bizning Shifokorlarimiz</h1>
+		<h1 class="m-0">Bizning Shifokorlarimiz</h1>
 	</div>
 	<div class="container">
 		<div class="doctor-cards grid row-gap-4">
@@ -45,8 +46,8 @@
 						<div class="user-card">
 							<img class="doctor-image" [src]="getView(item.image)" alt="doctor img">
 							<div class="user-card__about">
-								<h3 class="ellipsis_1">{{item.fullname}}</h3>
-								<h4 class="ellipsis_2">{{item?.department?.name}}: {{item?.role?.name}}</h4>
+								<h3 class="ellipsis_1 m-0">{{item.fullname}}</h3>
+								<h4 class="ellipsis_2 m-0">{{item?.department?.name}}: {{item?.role?.name}}</h4>
 							</div>
 						</div>
 						<a [routerLink]="['/service','doctor',item.id]" class="user-card-btn">Konsultatsiyaga yozilish</a>
@@ -61,7 +62,7 @@
 		</div>
 	</div>
 	<div class="more-link" routerLink="/doctors">
-		<h3>Barchasini ko’rish</h3>
+		<h3 class="m-0">Barchasini ko’rish</h3>
 		<img src="assets/images/arrow-right.svg" alt="arrow link icon">
 	</div>
 </div>
@@ -75,17 +76,19 @@
 		</div>
 		<div class="service-cards home-service__cards  grid row-gap-3">
 			<ng-container *ngFor="let item of $service | async">
-				<div class="col-12 md:col-6 lg:col-4 xl:col-3 px-3">
+				<div class="col-12 md:col-6 xl:col-4 md:px-3">
 					<div class="def-card" data-aos="fade-up">
-						<div class="card-icon">
-							<img [src]="getView(item.image!)" alt="service card icon">
+						<div class="def-card__wrap">
+							<div class="card-icon text-center">
+								<img [src]="getView(item.image!)" alt="service card icon">
+							</div>
+							<div class="card-about">
+								<h2 class="m-0 ellipsis_1">{{item.name}}</h2>
+								<h3 class="m-0 ellipsis_2">{{item?.staff?.department?.name}} <br> {{item?.staff?.fullname}}</h3>
+								<h4 class="mt-0 ellipsis_2" [innerHTML]="item.descr"></h4>
+							</div>
 						</div>
-						<div class="card-about">
-							<h2 class="ellipsis_1">{{item.name}}</h2>
-							<h3 class="ellipsis_2">{{item?.staff?.department?.name}} <br> {{item?.staff?.fullname}}</h3>
-							<h4 class="ellipsis_2" [innerHTML]="item.descr"></h4>
-							<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
-						</div>
+						<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
 					</div>
 				</div>
 			</ng-container>
@@ -99,7 +102,7 @@
 	</div>
 
 	<div class="more-link" routerLink="/service">
-		<h3>Barchasini ko’rish</h3>
+		<h3 class="m-0">Barchasini ko’rish</h3>
 		<img src="assets/images/arrow-right.svg" alt="arrow link icon">
 	</div>
 </div>
@@ -130,7 +133,8 @@
 		<div class="news-wrap">
 			<div class="page-title-block">
 				<h1 class="m-0">Yangiliklar</h1>
-				<h3 class="m-0">Pellentesque habitant morbi tristique senectus netus et malesuada fames ac turp egestas. Aliquam viverra
+				<h3 class="m-0">Pellentesque habitant morbi tristique senectus netus et malesuada fames ac turp egestas. Aliquam
+					viverra
 					arcu.
 					Donec aliquet blandit enim feugiat mattis.</h3>
 			</div>
@@ -174,7 +178,7 @@
 				</ng-container>
 			</div>
 			<div class="more-link" routerLink="/news">
-				<h3>Barchasini ko’rish</h3>
+				<h3 class="m-0">Barchasini ko’rish</h3>
 				<img src="assets/images/arrow-right.svg" alt="arrow link icon">
 			</div>
 		</div>
