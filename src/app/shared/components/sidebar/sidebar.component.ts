@@ -28,4 +28,7 @@ export class SidebarComponent {
 	isRegister() {
 		return this.authService.isAuthenticated()
 	}
+	logout() {
+		return this.authService.logout()
+	}
 }

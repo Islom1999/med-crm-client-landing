@@ -66,8 +66,25 @@ p-sidebar {
 	color: white;
 	border: none;
 	border-radius: 50%;
-	padding: 10px;
+	padding: 5px;
 	cursor: pointer;
 	transition: background-color 0.3s;
 	box-sizing: border-box;
+}
+.close-btn{
+	background: linear-gradient(90deg, #b2c8dd 0%, #fb0054 100%);
+	margin: 5px;
+}
+.close-btn:hover{
+	background: linear-gradient(90deg, #fb0054 0%, #b2c8dd 100%);
+}
+.close-btn:active {
+	background: linear-gradient(90deg, #fb0054 0%, #b2c8dd 100%);
+	transform: scale(1.05);
+}
+
+.mc-btn{
+	font-size: 12px;
+	padding: 15px;
+	margin: 0;
 }

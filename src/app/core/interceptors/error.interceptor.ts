@@ -21,6 +21,6 @@ export class ErrorInterceptor implements HttpInterceptor {
   }
 
   private handle401Error() {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/auth/register']);
   }
 }
