@@ -7,13 +7,13 @@
 		<!-- <p-menu [model]="items"></p-menu> -->
 		<nav class="menu-container">
 			<ul class="p-0 menu">
-				<li><a class="md:text-lg" (click)="close()" routerLink="/">Bosh Sahifa</a></li>
-				<li><a class="md:text-lg" (click)="close()" routerLink="/about">Biz Haqimizda</a></li>
-				<li><a class="md:text-lg" (click)="close()" routerLink="/doctors">Shifokorlar</a></li>
-				<li><a class="md:text-lg" (click)="close()" routerLink="/service">Xizmatlar</a></li>
-				<li><a class="md:text-lg" (click)="close()" routerLink="/rooms">Palatalar</a></li>
-				<li><a class="md:text-lg" (click)="close()" routerLink="/news">Yangiliklar</a></li>
-				<li><a class="md:text-lg" (click)="close()" routerLink="/contact">Bog’lanish</a></li>
+				<li><a class="md:text-lg" (click)="close()" routerLink="/">Главная</a></li>
+				<li><a class="md:text-lg" (click)="close()" routerLink="/about">О нас</a></li>
+				<li><a class="md:text-lg" (click)="close()" routerLink="/doctors">Врачи</a></li>
+				<li><a class="md:text-lg" (click)="close()" routerLink="/service">Услуги</a></li>
+				<li><a class="md:text-lg" (click)="close()" routerLink="/rooms">Чемберс</a></li>
+				<li><a class="md:text-lg" (click)="close()" routerLink="/news">Новости</a></li>
+				<li><a class="md:text-lg" (click)="close()" routerLink="/contact">Связь</a></li>
 			</ul>
 		</nav>
 
@@ -21,7 +21,7 @@
 			<div class="contact-item">
 				<span class="pi pi-phone"></span>
 				<div class="contact-numb">
-					<h4 class="m-0">Manager:</h4>
+					<h4 class="m-0">Менеджер:</h4>
 					<a href="tel:+998556010201">+998 55 601 0201</a>
 				</div>
 			</div>
@@ -42,7 +42,7 @@
 		<span class="pi pi-user profile-icon"></span>
 	</button>
 	<button *ngIf="!isRegister()" type="button" class="mc-btn" routerLink="/auth/login">
-		Kirish
+		Входить
 	</button>
 	<button class="profile-btn close-btn" *ngIf="isRegister()" (click)="logout()">
 		<span class="pi pi-sign-out profile-icon"></span>

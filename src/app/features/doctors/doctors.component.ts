@@ -16,7 +16,7 @@ export class DoctorsComponent implements OnInit {
   $doctors_detail!: IStaff
   $doctors!: Observable<IStaff[]>
 
-  $header:{image?: string | null, title: string, descr:string} = {image: null, title: "Bizning malakali shifokorlarimiz bilan tanishing", descr:"Nexus School - Bizning markazimiz 2021-yil 30- sentyabrda tashkil etilgan. Mana shu davr <br> mobaynida Harvard School o’quv markazi shiddat bilan rivojlanib bormoqda. Bu yerda muhit, <br> ta’lim olish borasidagi."}
+  $header:{image?: string | null, title: string, descr:string} = {image: null, title: "Bizning malakali Врачиimiz bilan tanishing", descr:"Nexus School - Bizning markazimiz 2021-yil 30- sentyabrda tashkil etilgan. Mana shu davr <br> mobaynida Harvard School o’quv markazi shiddat bilan rivojlanib bormoqda. Bu yerda muhit, <br> ta’lim olish borasidagi."}
 
   constructor(
     private _doctorService: DoctorsService,

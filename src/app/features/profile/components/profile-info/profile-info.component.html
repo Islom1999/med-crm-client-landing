@@ -12,11 +12,11 @@
 		<div class="col-12 md:col-8">
 			<div class="info-card">
 				<ul class="profile-info__nav">
-					<li><strong>Ism familiya:</strong>{{user.fullname}}</li>
+					<li><strong>Полное имя:</strong>{{user.fullname}}</li>
 					<li *ngIf="user.email"><strong>Email: </strong>{{user.email}}</li>
-					<li><strong>Manzil: </strong>{{user.address}}</li>
+					<li><strong>Адрес: </strong>{{user.address}}</li>
 					<li><strong>Tug'ulgan sana: </strong>{{user.date_of_birth | date : 'dd.MM.yyyy'}}</li>
-					<li><strong>Raqam: </strong>+998 ({{user.phone.toString().slice(0,2)}}) {{user.phone.toString().slice(2)}}
+					<li><strong>номер: </strong>+998 ({{user.phone.toString().slice(0,2)}}) {{user.phone.toString().slice(2)}}
 					</li>
 				</ul>
 			</div>

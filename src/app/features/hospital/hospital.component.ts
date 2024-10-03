@@ -19,10 +19,10 @@ export class HospitalComponent {
 	$params: HttpParams = new HttpParams();
 
 	$header_bottom: { image: string, count: number, title: string }[] = [
-		{ image: 'assets/images/item-icon1.svg', count: 100, title: 'Mamnun mijozlar' },
-		{ image: 'assets/images/item-icon1.svg', count: 100, title: 'Mamnun mijozlar' },
-		{ image: 'assets/images/item-icon1.svg', count: 100, title: 'Mamnun mijozlar' },
-		{ image: 'assets/images/item-icon1.svg', count: 100, title: 'Mamnun mijozlar' },
+		{ image: 'assets/images/item-icon1.svg', count: 100, title: 'Довольные клиенты' },
+		{ image: 'assets/images/item-icon1.svg', count: 100, title: 'Довольные клиенты' },
+		{ image: 'assets/images/item-icon1.svg', count: 100, title: 'Довольные клиенты' },
+		{ image: 'assets/images/item-icon1.svg', count: 100, title: 'Довольные клиенты' },
 	]
 	$client_comments: { image: string, star: number, name: string, comment: string }[] = [
 		{ image: 'assets/images/comment-card-bg.png', star: 5, name: "Sara Tancredi", comment: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrysstandard dummy text ever since the 1500s,' },

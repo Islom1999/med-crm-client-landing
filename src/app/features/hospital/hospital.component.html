@@ -3,8 +3,8 @@
 		<div class="home-wrap">
 			<div class="home-about z-5" data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="500"
 				data-aos-duration="500">
-				<h1 class="m-0"><span>GLOBAL HEALTHCARE</span> sizning sog’ligingiz haqida qayg’urad</h1>
-				<a routerLink="/about">Batafsil ma’lumot</a>
+				<h1 class="m-0"><span>GLOBAL HEALTHCARE</span> заботьтесь о своем здоровье</h1>
+				<a routerLink="/about">Узнать больше</a>
 			</div>
 			<div class="home-img hidden lg:block" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
 				data-aos-duration="500">
@@ -36,7 +36,7 @@
 <div id="doctors">
 	<div class="main-title">
 		<span class="title-element"></span>
-		<h1 class="m-0">Bizning Shifokorlarimiz</h1>
+		<h1 class="m-0">Наши врачи</h1>
 	</div>
 	<div class="container">
 		<div class="doctor-cards grid row-gap-4">
@@ -50,7 +50,7 @@
 								<h4 class="ellipsis_2 m-0">{{item?.department?.name}}: {{item?.role?.name}}</h4>
 							</div>
 						</div>
-						<a [routerLink]="['/service','doctor',item.id]" class="user-card-btn">Konsultatsiyaga yozilish</a>
+						<a [routerLink]="['/service','doctor',item.id]" class="user-card-btn">Запишитесь на консультацию</a>
 					</div>
 				</div>
 			</ng-container>
@@ -62,7 +62,7 @@
 		</div>
 	</div>
 	<div class="more-link" routerLink="/doctors">
-		<h3 class="m-0">Barchasini ko’rish</h3>
+		<h3 class="m-0">Посмотреть все</h3>
 		<img src="assets/images/arrow-right.svg" alt="arrow link icon">
 	</div>
 </div>
@@ -72,7 +72,7 @@
 		<!-- home service start -->
 		<div class="main-title">
 			<span class="title-element"></span>
-			<h1>Bizning Xizmatlarimiz</h1>
+			<h1>Наши условия</h1>
 		</div>
 		<div class="service-cards home-service__cards  grid row-gap-3">
 			<ng-container *ngFor="let item of $service | async">
@@ -88,7 +88,7 @@
 								<h4 class="mt-0 ellipsis_2" [innerHTML]="item.descr"></h4>
 							</div>
 						</div>
-						<button type="button" class="mc-btn">Konsultatsiyaga yozilish</button>
+						<button type="button" class="mc-btn">Запишитесь на консультацию</button>
 					</div>
 				</div>
 			</ng-container>
@@ -102,7 +102,7 @@
 	</div>
 
 	<div class="more-link" routerLink="/service">
-		<h3 class="m-0">Barchasini ko’rish</h3>
+		<h3 class="m-0">Посмотреть все</h3>
 		<img src="assets/images/arrow-right.svg" alt="arrow link icon">
 	</div>
 </div>
@@ -110,7 +110,7 @@
 <!-- home comment start -->
 <section id="home-comments" class="p100">
 	<div class="page-title-block">
-		<h1 class="m-0">Bizning mijozlarimiz fikri</h1>
+		<h1 class="m-0">Что думают наши клиенты</h1>
 		<h3 class="m-0">Pellentesque habitant morbi tristique senectus netus et malesuada fames ac turp egestas. Aliquam
 			viverra arcu.
 			Donec aliquet blandit enim feugiat mattis.</h3>
@@ -132,7 +132,7 @@
 	<div class="container">
 		<div class="news-wrap">
 			<div class="page-title-block">
-				<h1 class="m-0">Yangiliklar</h1>
+				<h1 class="m-0">Новости</h1>
 				<h3 class="m-0">Pellentesque habitant morbi tristique senectus netus et malesuada fames ac turp egestas. Aliquam
 					viverra
 					arcu.
@@ -161,7 +161,7 @@
 								</div>
 								<h1 class="card-title">{{item.title}}</h1>
 								<a [routerLink]="['/news',item.id]" class="more-link">
-									<span>Batafsil</span>
+									<span>Более</span>
 									<span>
 										<img src="assets/images/line-arrow-right.svg" alt="more link img">
 									</span>
@@ -178,7 +178,7 @@
 				</ng-container>
 			</div>
 			<div class="more-link" routerLink="/news">
-				<h3 class="m-0">Barchasini ko’rish</h3>
+				<h3 class="m-0">Посмотреть все</h3>
 				<img src="assets/images/arrow-right.svg" alt="arrow link icon">
 			</div>
 		</div>
@@ -195,7 +195,7 @@
 					<span class="title-element"></span>
 					<h1 class="m-0">FAQ</h1>
 				</div>
-				<h3 class="m-0">Sizda tug’iishi mumkin bo’lgan savollar.</h3>
+				<h3 class="m-0">Вопросы, которые могут у вас возникнуть.</h3>
 			</div>
 			<p-accordion>
 				<ng-container *ngFor="let item of $faq">

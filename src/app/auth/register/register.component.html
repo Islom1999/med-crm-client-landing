@@ -2,7 +2,7 @@
 	<div class="login-wrap grid">
 		<div class="col-12 lg:col-6">
 			<div class="login-about hidden sm:block">
-				<h2>GLOBAL HEALTHCARE shifoxonasi</h2>
+				<h2>GLOBAL HEALTHCARE больница</h2>
 				<div class="login-about__icon hidden lg:block">
 					<img src="assets/images/login-about-icon.svg" alt="company icon">
 				</div>
@@ -17,11 +17,11 @@
 								<form [formGroup]="$form_register" (submit)="submit()" class="form-series">
 									<div class="p-fluid p-formgrid grid">
 										<div class="col-12">
-											<h2>Ro’yxatdan o’tish</h2>
+											<h2>Регистрация</h2>
 										</div>
 		
 										<div class="series field col-12 md:col-6">
-											<label for="pass">Seriya (ixtiyoriy)</label>
+											<label for="pass">Seriya (необязат)</label>
 											<p-inputMask  
 												(change)="setPerson()" 
 												mask="(aa) 9999999"
@@ -30,21 +30,21 @@
 											</p-inputMask>
 										</div>
 										<div class="series field col-12 md:col-6">
-											<label for="re_pass">Tug'ilgan sana (ixtiyoriy)</label>
+											<label for="re_pass">Tug'ilgan sana (необязат)</label>
 											<input pInputText (blur)="setPerson()" formControlName="date_of_birth" type="date">	
 										</div>
 		
 										<div class="series field col-12 md:col-6">
-											<label for="name">Ism familiya</label>
-											<input pInputText type="text" formControlName="fullname" placeholder="Ism familiya">
+											<label for="name">Полное имя</label>
+											<input pInputText type="text" formControlName="fullname" placeholder="Полное имя">
 										</div>
 										<div class="series field col-12 md:col-6">
-											<label for="name">Manzil</label>
-											<input pInputText type="text" formControlName="address" placeholder="Manzil">
+											<label for="name">Адрес</label>
+											<input pInputText type="text" formControlName="address" placeholder="Адрес">
 										</div>
 		
 										<div class="series field col-12 md:col-6">
-											<label for="pass">Raqam</label>
+											<label for="pass">номер</label>
 											<!-- <input pInputText type="text" placeholder="+998(90)999 9999 " mask="(aa) 9999999"> -->
 											<p-inputMask 
 												mask="(99) 999-99-99" 
@@ -54,7 +54,7 @@
 											</p-inputMask>
 										</div>
 										<div class="series field col-12 md:col-6">
-											<label for="pass">Tasdiqlash kodi</label>
+											<label for="pass">Код подтверждения</label>
 											<!-- <input pInputText type="text" placeholder="0000 " mask="(aa) 9999999"> -->
 											<p-inputMask 
 												mask="9999" 
@@ -65,10 +65,10 @@
 									</div>
 									<div class="grid">
 										<div class="col-12 md:col-6 mb-3 flex-order-2 md:flex-order-1">
-											<button class="button-secondary" pButton label="Ortga"  (click)="back()"></button>
+											<button class="button-secondary" pButton label="Назад"  (click)="back()"></button>
 										</div>
 										<div class="col-12 md:col-6 flex-order-1 md:flex-order-2">
-											<button class="" pButton type="submit" label="Ro’yxatdan o’tish"></button>
+											<button class="" pButton type="submit" label="Регистрация"></button>
 										</div>
 									</div>
 								</form>
@@ -78,11 +78,11 @@
 								<form [formGroup]="$form_login" (submit)="submit()" class="form-series">
 									<div class="p-fluid p-formgrid grid">
 										<div class="col-12">
-											<h2>Kirish</h2>
+											<h2>Входить</h2>
 										</div>
 		
 										<div class="series field col-12 md:col-12">
-											<label for="pass">Raqam</label>
+											<label for="pass">номер</label>
 											<p-inputMask 
 												mask="(99) 999-99-99" 
 												formControlName="phone"
@@ -91,7 +91,7 @@
 											</p-inputMask>
 										</div>
 										<div class="series field col-12 md:col-12">
-											<label for="pass">Tasdiqlash kodi</label>
+											<label for="pass">Код подтверждения</label>
 											<!-- <input pInputText type="text" placeholder="0000 " mask="(aa) 9999999"> -->
 											<p-inputMask 
 												mask="9999" 
@@ -103,10 +103,10 @@
 									</div>
 									<div class="grid">
 										<div class="col-12 md:col-6 mb-3 flex-order-2 md:flex-order-1">
-											<button class="button-secondary" pButton label="Ortga"  (click)="back()"></button>
+											<button class="button-secondary" pButton label="Назад"  (click)="back()"></button>
 										</div>
 										<div class="col-12 md:col-6 flex-order-1 md:flex-order-2">
-											<button class="" pButton type="submit" label="Ro’yxatdan o’tish"></button>
+											<button class="" pButton type="submit" label="Регистрация"></button>
 										</div>
 									</div>
 								</form>
@@ -116,11 +116,11 @@
 								<form [formGroup]="$form_phone" (submit)="submit()" class="form-series">
 									<div class="p-fluid p-formgrid grid">
 										<div class="col-12">
-											<h2>Kirish</h2>
+											<h2>Входить</h2>
 										</div>
 		
 										<div class="series field col-12 md:col-12">
-											<label for="pass">Raqam</label>
+											<label for="pass">номер</label>
 											<!-- <input pInputText type="text" placeholder="+998(90)999 9999 " mask="(aa) 9999999"> -->
 											<p-inputMask 
 												mask="(99) 999-99-99" 
@@ -129,7 +129,7 @@
 										</div>
 										
 									</div>
-									<button type="submit">Kirish</button>
+									<button type="submit">Входить</button>
 								</form>
 							</ng-container>
 						</div>

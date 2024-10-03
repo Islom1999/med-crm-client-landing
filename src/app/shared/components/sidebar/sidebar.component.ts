@@ -13,13 +13,13 @@ export class SidebarComponent {
 
 	}
 	items: MenuItem[] = [
-		{ label: 'Bosh Sahifa', icon: 'pi pi-home', routerLink: '/' },
-		{ label: 'Biz Haqimizda', icon: 'pi pi-info-circle', routerLink: '/about' },
-		{ label: 'Shifokorlar', icon: 'pi pi-user-md', routerLink: '/doctors' },
-		{ label: 'Xizmatlar', icon: 'pi pi-briefcase', routerLink: '/service' },
-		{ label: 'Palatalar', icon: 'pi pi-building', routerLink: '/rooms' },
-		{ label: 'Yangiliklar', icon: 'pi pi-newspaper', routerLink: '/news' },
-		{ label: 'Bog’lanish', icon: 'pi pi-phone', routerLink: '/contact' }
+		{ label: 'Главная', icon: 'pi pi-home', routerLink: '/' },
+		{ label: 'О нас', icon: 'pi pi-info-circle', routerLink: '/about' },
+		{ label: 'Врачи', icon: 'pi pi-user-md', routerLink: '/doctors' },
+		{ label: 'Услуги', icon: 'pi pi-briefcase', routerLink: '/service' },
+		{ label: 'Чемберс', icon: 'pi pi-building', routerLink: '/rooms' },
+		{ label: 'Новости', icon: 'pi pi-newspaper', routerLink: '/news' },
+		{ label: 'Связь', icon: 'pi pi-phone', routerLink: '/contact' }
 	];
 
 	close() {
